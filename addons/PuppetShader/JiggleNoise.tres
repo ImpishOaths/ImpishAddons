@@ -1,0 +1,14 @@
+[gd_resource type="NoiseTexture2D" format=3 uid="uid://bodg5wgvkmhgq"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_6to4c"]
+noise_type = 2
+frequency = 0.024
+
+[resource]
+width = 128
+height = 128
+generate_mipmaps = false
+noise = SubResource("FastNoiseLite_6to4c")
+seamless = true
+as_normal_map = true
+bump_strength = 32.0

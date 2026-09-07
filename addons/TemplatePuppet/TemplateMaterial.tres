@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://ch7cxq5cnr3xe"]
+
+[ext_resource type="Shader" uid="uid://b11whg22imtg1" path="res://addons/PuppetShader/PuppetShader.gdshader" id="1_100h1"]
+[ext_resource type="Texture2D" uid="uid://dp113d4quwsn1" path="res://addons/TemplatePuppet/TemplateGradient.tres" id="2_cjjyl"]
+
+[resource]
+shader = ExtResource("1_100h1")
+shader_parameter/Gradient = ExtResource("2_cjjyl")
+shader_parameter/DoShading = true
+shader_parameter/FlipShading = false

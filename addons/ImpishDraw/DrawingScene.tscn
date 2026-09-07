@@ -1,0 +1,352 @@
+[gd_scene format=3 uid="uid://51xqnrwek57r"]
+
+[ext_resource type="Script" uid="uid://s68l8stx0noj" path="res://addons/ImpishDraw/DrawingScene.cs" id="1_0ck0s"]
+[ext_resource type="ButtonGroup" uid="uid://bb01a27pwr8ih" path="res://addons/ImpishDraw/ToolGroup.tres" id="2_bue8r"]
+[ext_resource type="Texture2D" uid="uid://b20ye16s5ebta" path="res://addons/ImpishDraw/ColorButton.png" id="2_o03qi"]
+[ext_resource type="Script" uid="uid://fn8hf7gxyaki" path="res://addons/ImpishDraw/MouseDraw.cs" id="3_15s2e"]
+[ext_resource type="Script" uid="uid://cqjo050ts8k34" path="res://addons/ImpishDraw/BrushResource.cs" id="3_d0myd"]
+[ext_resource type="Shader" uid="uid://dsiuglufw2w34" path="res://addons/ImpishDraw/IgnoreAlpha.gdshader" id="5_8fbnh"]
+[ext_resource type="Script" uid="uid://qotcu5pqqgki" path="res://addons/ImpishDraw/SelectionDrawing.cs" id="7_2oc5k"]
+[ext_resource type="Shader" uid="uid://cmoo1lpqncej7" path="res://addons/ImpishDraw/SelectionDrawing.gdshader" id="7_focda"]
+
+[sub_resource type="Resource" id="Resource_k5of3"]
+script = ExtResource("3_d0myd")
+Size = 3.0
+Softness = 3.0
+Color = Color(0, 0, 0, 1)
+metadata/_custom_type_script = "uid://cqjo050ts8k34"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d0myd"]
+shader = ExtResource("5_8fbnh")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lax1u"]
+shader = ExtResource("7_focda")
+shader_parameter/colA = Color(1, 1, 1, 0.5882353)
+shader_parameter/colB = Color(0, 1, 1, 0.78431374)
+shader_parameter/rate = 5.0
+
+[node name="Panel" type="PanelContainer" unique_id=1338384859]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -65.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_0ck0s")
+ToolButtonGroup = ExtResource("2_bue8r")
+Brush = SubResource("Resource_k5of3")
+
+[node name="Container" type="HBoxContainer" parent="." unique_id=1409657086]
+layout_mode = 2
+
+[node name="Buttons" type="VBoxContainer" parent="Container" unique_id=1105204805]
+layout_mode = 2
+
+[node name="DrawButton" type="Button" parent="Container/Buttons" unique_id=136828289]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+text = "Draw"
+
+[node name="SaveButton" type="Button" parent="Container/Buttons" unique_id=1335022953]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(86, 0)
+layout_mode = 2
+focus_mode = 0
+text = "Save"
+
+[node name="BrushSettings" type="GridContainer" parent="Container" unique_id=1082225480]
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+
+[node name="SizeLabel" type="Label" parent="Container/BrushSettings" unique_id=1659766528]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Size"
+
+[node name="SizeSlider" type="HSlider" parent="Container/BrushSettings" unique_id=1547551780]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 4
+min_value = 1.0
+max_value = 10.0
+step = 0.0
+value = 3.0
+
+[node name="SizeReadout" type="Label" parent="Container/BrushSettings" unique_id=245696441]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+text = "03.0"
+horizontal_alignment = 2
+
+[node name="SoftLabel" type="Label" parent="Container/BrushSettings" unique_id=1740999554]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Soft"
+
+[node name="SoftSlider" type="HSlider" parent="Container/BrushSettings" unique_id=2044827020]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 4
+max_value = 10.0
+step = 0.0
+value = 3.0
+
+[node name="SoftReadout" type="Label" parent="Container/BrushSettings" unique_id=1738207282]
+unique_name_in_owner = true
+layout_mode = 2
+text = "03.0"
+horizontal_alignment = 2
+
+[node name="FillSettings" type="HBoxContainer" parent="Container" unique_id=253821661]
+visible = false
+layout_mode = 2
+
+[node name="Colors" type="VBoxContainer" parent="Container" unique_id=1118697279]
+layout_mode = 2
+
+[node name="ColorSelectButton" type="ColorPickerButton" parent="Container/Colors" unique_id=1568814978]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Palette" type="HBoxContainer" parent="Container/Colors" unique_id=1176033916]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="PaletteButton1" type="TextureButton" parent="Container/Colors/Palette" unique_id=755186743]
+unique_name_in_owner = true
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+texture_normal = ExtResource("2_o03qi")
+stretch_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="Container/Colors/Palette/PaletteButton1" unique_id=1875145051]
+material = SubResource("ShaderMaterial_d0myd")
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PaletteButton2" type="TextureButton" parent="Container/Colors/Palette" unique_id=949061773]
+unique_name_in_owner = true
+modulate = Color(1, 0, 0, 1)
+layout_mode = 2
+texture_normal = ExtResource("2_o03qi")
+stretch_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="Container/Colors/Palette/PaletteButton2" unique_id=1286089569]
+material = SubResource("ShaderMaterial_d0myd")
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PaletteButton3" type="TextureButton" parent="Container/Colors/Palette" unique_id=1009290909]
+unique_name_in_owner = true
+modulate = Color(0, 1, 0, 1)
+layout_mode = 2
+texture_normal = ExtResource("2_o03qi")
+stretch_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="Container/Colors/Palette/PaletteButton3" unique_id=770415696]
+material = SubResource("ShaderMaterial_d0myd")
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PaletteButton4" type="TextureButton" parent="Container/Colors/Palette" unique_id=1051553624]
+unique_name_in_owner = true
+modulate = Color(0, 0, 1, 1)
+layout_mode = 2
+texture_normal = ExtResource("2_o03qi")
+stretch_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="Container/Colors/Palette/PaletteButton4" unique_id=1198725722]
+material = SubResource("ShaderMaterial_d0myd")
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PaletteButton5" type="TextureButton" parent="Container/Colors/Palette" unique_id=1280362933]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = ExtResource("2_o03qi")
+stretch_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="Container/Colors/Palette/PaletteButton5" unique_id=616369990]
+material = SubResource("ShaderMaterial_d0myd")
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MoveSettings" type="HBoxContainer" parent="Container" unique_id=226513935]
+visible = false
+layout_mode = 2
+
+[node name="ToolsGrid" type="GridContainer" parent="Container" unique_id=4029427]
+layout_mode = 2
+size_flags_vertical = 4
+columns = 2
+
+[node name="BrushToolButton" type="CheckBox" parent="Container/ToolsGrid" unique_id=2138735102]
+unique_name_in_owner = true
+layout_mode = 2
+button_pressed = true
+button_group = ExtResource("2_bue8r")
+text = "Brush"
+metadata/ToolIndex = 0
+metadata/DrawMouse = true
+
+[node name="SelectToolButton" type="CheckBox" parent="Container/ToolsGrid" unique_id=2115565604]
+unique_name_in_owner = true
+layout_mode = 2
+button_group = ExtResource("2_bue8r")
+text = "Select"
+metadata/ToolIndex = 1
+metadata/DrawMouse = false
+
+[node name="LineToolButton" type="CheckBox" parent="Container/ToolsGrid" unique_id=1884585470]
+unique_name_in_owner = true
+layout_mode = 2
+button_group = ExtResource("2_bue8r")
+text = "Line"
+metadata/ToolIndex = 2
+metadata/DrawMouse = true
+
+[node name="FillToolButton" type="CheckBox" parent="Container/ToolsGrid" unique_id=651484738]
+unique_name_in_owner = true
+layout_mode = 2
+button_group = ExtResource("2_bue8r")
+text = "Fill"
+metadata/ToolIndex = 3
+metadata/DrawMouse = false
+
+[node name="Filler" type="Control" parent="Container" unique_id=1039050911]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ExtraControls" type="GridContainer" parent="Container" unique_id=258812157]
+layout_mode = 2
+size_flags_vertical = 4
+columns = 2
+
+[node name="FilterBox" type="CheckBox" parent="Container/ExtraControls" unique_id=1008934255]
+unique_name_in_owner = true
+layout_mode = 2
+button_pressed = true
+text = "Filter"
+
+[node name="TopBox" type="CheckBox" parent="Container/ExtraControls" unique_id=608753685]
+unique_name_in_owner = true
+layout_mode = 2
+button_pressed = true
+text = "Top"
+
+[node name="MaterialBox" type="CheckBox" parent="Container/ExtraControls" unique_id=1314365137]
+unique_name_in_owner = true
+layout_mode = 2
+button_pressed = true
+text = "Material"
+
+[node name="ClearCache" type="Button" parent="Container/ExtraControls" unique_id=1381086466]
+layout_mode = 2
+text = "Clear Cache"
+
+[node name="ActiveReference" type="ReferenceRect" parent="." unique_id=992243011]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+mouse_filter = 2
+border_color = Color(1, 1, 1, 1)
+
+[node name="MouseDraw" type="Node2D" parent="." unique_id=835248045 node_paths=PackedStringArray("Parent")]
+unique_name_in_owner = true
+visible = false
+top_level = true
+position = Vector2(787.30817, 772.63416)
+script = ExtResource("3_15s2e")
+Parent = NodePath("..")
+
+[node name="SelectionDrawing" type="Node2D" parent="." unique_id=1608647620]
+unique_name_in_owner = true
+visible = false
+material = SubResource("ShaderMaterial_lax1u")
+position = Vector2(0, -583)
+script = ExtResource("7_2oc5k")
+
+[connection signal="toggled" from="Container/Buttons/DrawButton" to="." method="SetDrawingActive" binds= [false]]
+[connection signal="pressed" from="Container/Buttons/SaveButton" to="." method="SaveImagesToOrigin"]
+[connection signal="value_changed" from="Container/BrushSettings/SizeSlider" to="." method="UpdateBrush" unbinds=1]
+[connection signal="value_changed" from="Container/BrushSettings/SoftSlider" to="." method="UpdateBrush" unbinds=1]
+[connection signal="color_changed" from="Container/Colors/ColorSelectButton" to="." method="ModifyPaletteColor"]
+[connection signal="pressed" from="Container/Colors/Palette/PaletteButton1" to="." method="SetColorFromPalette" binds= [0]]
+[connection signal="pressed" from="Container/Colors/Palette/PaletteButton2" to="." method="SetColorFromPalette" binds= [1]]
+[connection signal="pressed" from="Container/Colors/Palette/PaletteButton3" to="." method="SetColorFromPalette" binds= [2]]
+[connection signal="pressed" from="Container/Colors/Palette/PaletteButton4" to="." method="SetColorFromPalette" binds= [3]]
+[connection signal="pressed" from="Container/Colors/Palette/PaletteButton5" to="." method="SetColorFromPalette" binds= [4]]
+[connection signal="toggled" from="Container/ExtraControls/FilterBox" to="." method="ToggleFilter"]
+[connection signal="toggled" from="Container/ExtraControls/TopBox" to="." method="ToggleTop"]
+[connection signal="toggled" from="Container/ExtraControls/MaterialBox" to="." method="ToggleMaterial"]
+[connection signal="pressed" from="Container/ExtraControls/ClearCache" to="." method="ClearCache"]

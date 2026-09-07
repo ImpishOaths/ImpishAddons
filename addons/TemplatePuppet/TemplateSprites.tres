@@ -1,0 +1,490 @@
+[gd_resource type="TileSet" script_class="SpriteSet" format=3 uid="uid://c4iak07fkjffy"]
+
+[ext_resource type="Material" uid="uid://ch7cxq5cnr3xe" path="res://addons/TemplatePuppet/TemplateMaterial.tres" id="1_r2u5e"]
+[ext_resource type="Script" uid="uid://do6cul6vaacdd" path="res://addons/SpriteSet/SpriteData.cs" id="2_x8eam"]
+[ext_resource type="Texture2D" uid="uid://bolmd5giym5vs" path="res://addons/TemplatePuppet/TemplateImage.png" id="3_gu31g"]
+[ext_resource type="Script" uid="uid://do0exgujxswtf" path="res://addons/SpriteSet/SpriteSet.cs" id="4_fk1n4"]
+
+[sub_resource type="Resource" id="Resource_rhi2m"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(10, 3)
+TileSize = Vector2i(1, 1)
+Group = &"Body"
+Name = &"Ankle"
+
+[sub_resource type="Resource" id="Resource_xji16"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(5, 3)
+TileSize = Vector2i(2, 2)
+Group = &"Body"
+Name = &"ArmLower"
+
+[sub_resource type="Resource" id="Resource_0yhfr"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(3, 3)
+TileSize = Vector2i(2, 2)
+Group = &"Body"
+Name = &"ArmUpper"
+
+[sub_resource type="Resource" id="Resource_0utcp"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(15, 0)
+TileSize = Vector2i(1, 1)
+Group = &"Body"
+Name = &"Blob"
+
+[sub_resource type="Resource" id="Resource_ybtyo"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(0, 3)
+TileSize = Vector2i(3, 3)
+Group = &"Body"
+Name = &"BodyLower"
+
+[sub_resource type="Resource" id="Resource_lmwgf"]
+script = ExtResource("2_x8eam")
+TileSize = Vector2i(3, 3)
+Group = &"Body"
+Name = &"BodyUpper"
+
+[sub_resource type="Resource" id="Resource_7uu1v"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(7, 3)
+TileSize = Vector2i(2, 2)
+Group = &"Body"
+Name = &"Breast"
+
+[sub_resource type="Resource" id="Resource_shxqh"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(7, 5)
+TileSize = Vector2i(2, 2)
+Group = &"Body"
+Name = &"Foot"
+
+[sub_resource type="Resource" id="Resource_sfs1s"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(3, 0)
+TileSize = Vector2i(3, 3)
+Group = &"Body"
+Name = &"Head"
+
+[sub_resource type="Resource" id="Resource_1nyxq"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(5, 5)
+TileSize = Vector2i(2, 2)
+Group = &"Body"
+Name = &"LegLower"
+
+[sub_resource type="Resource" id="Resource_4pqv7"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(3, 5)
+TileSize = Vector2i(2, 2)
+Group = &"Body"
+Name = &"LegUpper"
+
+[sub_resource type="Resource" id="Resource_gj43w"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(6, 1)
+TileSize = Vector2i(1, 1)
+Group = &"Body"
+Name = &"Nose"
+
+[sub_resource type="Resource" id="Resource_5fupm"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(6, 2)
+TileSize = Vector2i(1, 1)
+Group = &"Body"
+Name = &"Palm"
+
+[sub_resource type="Resource" id="Resource_6qhn1"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(0, 6)
+TileSize = Vector2i(3, 3)
+Group = &"Body"
+Name = &"Tail"
+
+[sub_resource type="Resource" id="Resource_25547"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(9, 3)
+TileSize = Vector2i(1, 1)
+Group = &"Body"
+Name = &"Wrist"
+
+[sub_resource type="Resource" id="Resource_5agqe"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(14, 0)
+TileSize = Vector2i(1, 1)
+AlternateIndex = 1
+Group = &"Brow"
+Name = &"ArchDown"
+
+[sub_resource type="Resource" id="Resource_arc11"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(14, 0)
+TileSize = Vector2i(1, 1)
+Group = &"Brow"
+Name = &"ArchUp"
+
+[sub_resource type="Resource" id="Resource_jhb5o"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(13, 0)
+TileSize = Vector2i(1, 1)
+Group = &"Brow"
+Name = &"BigSlant"
+
+[sub_resource type="Resource" id="Resource_rn2wo"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(13, 0)
+TileSize = Vector2i(1, 1)
+AlternateIndex = 1
+Group = &"Brow"
+Name = &"BigSlantBack"
+
+[sub_resource type="Resource" id="Resource_kgdrn"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(11, 0)
+TileSize = Vector2i(1, 1)
+Group = &"Brow"
+Name = &"Flat"
+
+[sub_resource type="Resource" id="Resource_wm6i7"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(11, 0)
+TileSize = Vector2i(1, 1)
+AlternateIndex = 1
+Group = &"Brow"
+Name = &"Raised"
+
+[sub_resource type="Resource" id="Resource_rcsaj"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(12, 0)
+TileSize = Vector2i(1, 1)
+Group = &"Brow"
+Name = &"Slant"
+
+[sub_resource type="Resource" id="Resource_proag"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(12, 0)
+TileSize = Vector2i(1, 1)
+AlternateIndex = 1
+Group = &"Brow"
+Name = &"SlantBack"
+
+[sub_resource type="Resource" id="Resource_ww4ji"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(10, 0)
+TileSize = Vector2i(1, 1)
+AlternateIndex = 1
+Group = &"Eye"
+Name = &"ArchDown"
+
+[sub_resource type="Resource" id="Resource_is5vx"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(10, 0)
+TileSize = Vector2i(1, 1)
+Group = &"Eye"
+Name = &"ArchUp"
+
+[sub_resource type="Resource" id="Resource_4r2uc"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(8, 0)
+TileSize = Vector2i(1, 1)
+Group = &"Eye"
+Name = &"Closed"
+
+[sub_resource type="Resource" id="Resource_hbrbb"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(7, 0)
+TileSize = Vector2i(1, 1)
+Group = &"Eye"
+Name = &"Narrow"
+
+[sub_resource type="Resource" id="Resource_0q0xb"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(9, 0)
+TileSize = Vector2i(1, 1)
+Group = &"Eye"
+Name = &"Pupil"
+
+[sub_resource type="Resource" id="Resource_euidm"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(6, 0)
+TileSize = Vector2i(1, 1)
+Group = &"Eye"
+Name = &"Wide"
+
+[sub_resource type="Resource" id="Resource_2peev"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(8, 2)
+TileSize = Vector2i(1, 1)
+Group = &"Finger"
+Name = &"Down"
+
+[sub_resource type="Resource" id="Resource_ujxgc"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(7, 2)
+TileSize = Vector2i(1, 1)
+Group = &"Finger"
+Name = &"Up"
+
+[sub_resource type="Resource" id="Resource_e7g1p"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(7, 1)
+TileSize = Vector2i(1, 1)
+Group = &"Mouth"
+Name = &"Flat"
+
+[sub_resource type="Resource" id="Resource_5ym7x"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(10, 1)
+TileSize = Vector2i(1, 1)
+Group = &"Mouth"
+Name = &"Frown"
+
+[sub_resource type="Resource" id="Resource_6dxlg"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(8, 1)
+TileSize = Vector2i(1, 1)
+Group = &"Mouth"
+Name = &"Open"
+
+[sub_resource type="Resource" id="Resource_v7hm2"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(9, 1)
+TileSize = Vector2i(1, 1)
+Group = &"Mouth"
+Name = &"Smile"
+
+[sub_resource type="Resource" id="Resource_6qkw6"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(10, 2)
+TileSize = Vector2i(1, 1)
+Group = &"Thumb"
+Name = &"Down"
+
+[sub_resource type="Resource" id="Resource_orehm"]
+script = ExtResource("2_x8eam")
+TileCoord = Vector2i(9, 2)
+TileSize = Vector2i(1, 1)
+Group = &"Thumb"
+Name = &"Up"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uoqfq"]
+texture = ExtResource("3_gu31g")
+0:0/size_in_atlas = Vector2i(3, 3)
+0:0/0 = 0
+0:0/0/custom_data_0 = &"Body"
+0:0/0/custom_data_1 = &"BodyUpper"
+0:0/0/custom_data_2 = Vector2(-0.6300583, -4.2995567)
+3:0/size_in_atlas = Vector2i(3, 3)
+3:0/0 = 0
+3:0/0/custom_data_0 = &"Body"
+3:0/0/custom_data_1 = &"Head"
+3:0/0/custom_data_2 = Vector2(-1.143558, -17.915245)
+0:3/size_in_atlas = Vector2i(3, 3)
+0:3/0 = 0
+0:3/0/custom_data_0 = &"Body"
+0:3/0/custom_data_1 = &"BodyLower"
+0:3/0/custom_data_2 = Vector2(-0.7298087, -5.8625393)
+3:3/size_in_atlas = Vector2i(2, 2)
+3:3/0 = 0
+3:3/0/custom_data_0 = &"Body"
+3:3/0/custom_data_1 = &"ArmUpper"
+3:3/0/custom_data_2 = Vector2(10.841684, -1.0868187)
+5:3/size_in_atlas = Vector2i(2, 2)
+5:3/0 = 0
+5:3/0/custom_data_0 = &"Body"
+5:3/0/custom_data_1 = &"ArmLower"
+5:3/0/custom_data_2 = Vector2(9.09947, -1.9254227)
+3:5/size_in_atlas = Vector2i(2, 2)
+3:5/0 = 0
+3:5/0/custom_data_0 = &"Body"
+3:5/0/custom_data_1 = &"LegUpper"
+3:5/0/custom_data_2 = Vector2(4.594681, -1.0162573)
+5:5/size_in_atlas = Vector2i(2, 2)
+5:5/0 = 0
+5:5/0/custom_data_0 = &"Body"
+5:5/0/custom_data_1 = &"LegLower"
+5:5/0/custom_data_2 = Vector2(8.244324, -0.8574524)
+7:5/size_in_atlas = Vector2i(2, 2)
+7:5/0 = 0
+7:5/0/custom_data_0 = &"Body"
+7:5/0/custom_data_1 = &"Foot"
+7:5/0/custom_data_2 = Vector2(0.6644864, -8.207248)
+6:0/0 = 0
+6:0/0/custom_data_0 = &"Eye"
+6:0/0/custom_data_1 = &"Wide"
+6:0/0/custom_data_2 = Vector2(-1.6097698, 0.188797)
+6:1/0 = 0
+6:1/0/custom_data_0 = &"Body"
+6:1/0/custom_data_1 = &"Nose"
+6:1/0/custom_data_2 = Vector2(1.9815426, -2.0014725)
+7:0/0 = 0
+7:0/0/custom_data_0 = &"Eye"
+7:0/0/custom_data_1 = &"Narrow"
+7:0/0/custom_data_2 = Vector2(-0.9156227, -0.060279846)
+9:0/0 = 0
+9:0/0/custom_data_0 = &"Eye"
+9:0/0/custom_data_1 = &"Pupil"
+9:0/0/custom_data_2 = Vector2(-0.9755368, -0.61091614)
+8:0/0 = 0
+8:0/0/custom_data_0 = &"Eye"
+8:0/0/custom_data_1 = &"Closed"
+7:1/0 = 0
+7:1/0/custom_data_0 = &"Mouth"
+7:1/0/custom_data_1 = &"Flat"
+8:1/0 = 0
+8:1/0/custom_data_0 = &"Mouth"
+8:1/0/custom_data_1 = &"Open"
+9:1/0 = 0
+9:1/0/custom_data_0 = &"Mouth"
+9:1/0/custom_data_1 = &"Smile"
+10:1/0 = 0
+10:1/0/custom_data_0 = &"Mouth"
+10:1/0/custom_data_1 = &"Frown"
+12:0/next_alternative_id = 2
+12:0/0 = 0
+12:0/0/custom_data_0 = &"Brow"
+12:0/0/custom_data_1 = &"Slant"
+12:0/0/custom_data_2 = Vector2(-0.4227333, 1.8124084)
+12:0/1 = 1
+12:0/1/flip_h = true
+12:0/1/custom_data_0 = &"Brow"
+12:0/1/custom_data_1 = &"SlantBack"
+11:0/next_alternative_id = 2
+11:0/0 = 0
+11:0/0/custom_data_0 = &"Brow"
+11:0/0/custom_data_1 = &"Flat"
+11:0/1 = 1
+11:0/1/custom_data_0 = &"Brow"
+11:0/1/custom_data_1 = &"Raised"
+11:0/1/custom_data_2 = Vector2(-0.38469887, -2.3595734)
+13:0/next_alternative_id = 2
+13:0/0 = 0
+13:0/0/custom_data_0 = &"Brow"
+13:0/0/custom_data_1 = &"BigSlant"
+13:0/1 = 1
+13:0/1/flip_h = true
+13:0/1/custom_data_0 = &"Brow"
+13:0/1/custom_data_1 = &"BigSlantBack"
+14:0/next_alternative_id = 2
+14:0/0 = 0
+14:0/0/custom_data_0 = &"Brow"
+14:0/0/custom_data_1 = &"ArchUp"
+14:0/1 = 1
+14:0/1/flip_v = true
+14:0/1/custom_data_0 = &"Brow"
+14:0/1/custom_data_1 = &"ArchDown"
+10:0/next_alternative_id = 2
+10:0/0 = 0
+10:0/0/custom_data_0 = &"Eye"
+10:0/0/custom_data_1 = &"ArchUp"
+10:0/1 = 1
+10:0/1/flip_v = true
+10:0/1/custom_data_0 = &"Eye"
+10:0/1/custom_data_1 = &"ArchDown"
+6:2/0 = 0
+6:2/0/custom_data_0 = &"Body"
+6:2/0/custom_data_1 = &"Palm"
+6:2/0/custom_data_2 = Vector2(-0.27814865, -5.966379)
+7:2/0 = 0
+7:2/0/custom_data_0 = &"Finger"
+7:2/0/custom_data_1 = &"Up"
+7:2/0/custom_data_2 = Vector2(-1.2407436, -3.653656)
+8:2/0 = 0
+8:2/0/custom_data_0 = &"Finger"
+8:2/0/custom_data_1 = &"Down"
+8:2/0/custom_data_2 = Vector2(-2.7376404, 1.1716137)
+9:2/0 = 0
+9:2/0/custom_data_0 = &"Thumb"
+9:2/0/custom_data_1 = &"Up"
+9:2/0/custom_data_2 = Vector2(0.18612099, -3.4458618)
+10:2/0 = 0
+10:2/0/custom_data_0 = &"Thumb"
+10:2/0/custom_data_1 = &"Down"
+10:2/0/custom_data_2 = Vector2(1.1337662, 0.54958725)
+7:3/size_in_atlas = Vector2i(2, 2)
+7:3/0 = 0
+7:3/0/custom_data_0 = &"Body"
+7:3/0/custom_data_1 = &"Breast"
+7:3/0/custom_data_2 = Vector2(-0.28180504, 3.1861572)
+0:6/size_in_atlas = Vector2i(3, 3)
+0:6/0 = 0
+0:6/0/custom_data_0 = &"Body"
+0:6/0/custom_data_1 = &"Tail"
+0:6/0/custom_data_2 = Vector2(-16.947441, 4.025112)
+15:0/0 = 0
+15:0/0/custom_data_0 = &"Body"
+15:0/0/custom_data_1 = &"Blob"
+15:0/0/custom_data_2 = Vector2(2.272707, -1.3235626)
+9:3/0 = 0
+9:3/0/custom_data_0 = &"Body"
+9:3/0/custom_data_1 = &"Wrist"
+10:3/0 = 0
+10:3/0/custom_data_0 = &"Body"
+10:3/0/custom_data_1 = &"Ankle"
+
+[resource]
+custom_data_layer_0/name = "Group"
+custom_data_layer_0/type = 21
+custom_data_layer_1/name = "Name"
+custom_data_layer_1/type = 21
+custom_data_layer_2/name = "Offset"
+custom_data_layer_2/type = 5
+sources/0 = SubResource("TileSetAtlasSource_uoqfq")
+script = ExtResource("4_fk1n4")
+Sprites = Dictionary[StringName, Dictionary]({
+&"Body": Dictionary[StringName, ExtResource("2_x8eam")]({
+&"Ankle": SubResource("Resource_rhi2m"),
+&"ArmLower": SubResource("Resource_xji16"),
+&"ArmUpper": SubResource("Resource_0yhfr"),
+&"Blob": SubResource("Resource_0utcp"),
+&"BodyLower": SubResource("Resource_ybtyo"),
+&"BodyUpper": SubResource("Resource_lmwgf"),
+&"Breast": SubResource("Resource_7uu1v"),
+&"Foot": SubResource("Resource_shxqh"),
+&"Head": SubResource("Resource_sfs1s"),
+&"LegLower": SubResource("Resource_1nyxq"),
+&"LegUpper": SubResource("Resource_4pqv7"),
+&"Nose": SubResource("Resource_gj43w"),
+&"Palm": SubResource("Resource_5fupm"),
+&"Tail": SubResource("Resource_6qhn1"),
+&"Wrist": SubResource("Resource_25547")
+}),
+&"Brow": Dictionary[StringName, ExtResource("2_x8eam")]({
+&"ArchDown": SubResource("Resource_5agqe"),
+&"ArchUp": SubResource("Resource_arc11"),
+&"BigSlant": SubResource("Resource_jhb5o"),
+&"BigSlantBack": SubResource("Resource_rn2wo"),
+&"Flat": SubResource("Resource_kgdrn"),
+&"Raised": SubResource("Resource_wm6i7"),
+&"Slant": SubResource("Resource_rcsaj"),
+&"SlantBack": SubResource("Resource_proag")
+}),
+&"Eye": Dictionary[StringName, ExtResource("2_x8eam")]({
+&"ArchDown": SubResource("Resource_ww4ji"),
+&"ArchUp": SubResource("Resource_is5vx"),
+&"Closed": SubResource("Resource_4r2uc"),
+&"Narrow": SubResource("Resource_hbrbb"),
+&"Pupil": SubResource("Resource_0q0xb"),
+&"Wide": SubResource("Resource_euidm")
+}),
+&"Finger": Dictionary[StringName, ExtResource("2_x8eam")]({
+&"Down": SubResource("Resource_2peev"),
+&"Up": SubResource("Resource_ujxgc")
+}),
+&"Mouth": Dictionary[StringName, ExtResource("2_x8eam")]({
+&"Flat": SubResource("Resource_e7g1p"),
+&"Frown": SubResource("Resource_5ym7x"),
+&"Open": SubResource("Resource_6dxlg"),
+&"Smile": SubResource("Resource_v7hm2")
+}),
+&"Thumb": Dictionary[StringName, ExtResource("2_x8eam")]({
+&"Down": SubResource("Resource_6qkw6"),
+&"Up": SubResource("Resource_orehm")
+})
+})
+Textures = Dictionary[int, Texture2D]({
+0: ExtResource("3_gu31g")
+})
+DefaultMaterial = ExtResource("1_r2u5e")
+metadata/_custom_type_script = "uid://do0exgujxswtf"

@@ -1,0 +1,85 @@
+[gd_resource type="AnimationLibrary" format=3 uid="uid://kgaywuxduymp"]
+
+[sub_resource type="Animation" id="Animation_qhprd"]
+resource_name = "BlinkNarrow"
+length = 4.0
+loop_mode = 1
+step = 0.2
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EyeLControl")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("Eye/BlinkNarrow"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "animation"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("EyeRControl")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": PackedStringArray("Eye/BlinkNarrow"),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_wsyk5"]
+resource_name = "BlinkWide"
+length = 4.0
+loop_mode = 1
+step = 0.2
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EyeLControl")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("Eye/BlinkWide"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "animation"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("EyeRControl")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": PackedStringArray("Eye/BlinkWide"),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_aqllk"]
+resource_name = "Closed"
+length = 0.001
+step = 0.2
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EyeLControl")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("Eye/Closed"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "animation"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("EyeRControl")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": PackedStringArray("Eye/Closed"),
+"times": PackedFloat32Array(0)
+}
+
+[resource]
+_data = {
+&"BlinkNarrow": SubResource("Animation_qhprd"),
+&"BlinkWide": SubResource("Animation_wsyk5"),
+&"Closed": SubResource("Animation_aqllk")
+}
