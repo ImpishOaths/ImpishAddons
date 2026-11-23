@@ -66,9 +66,6 @@ public partial class ImpishDrawPlugin : EditorPlugin
         return DrawingScene.PassInput(ev);
     }
 
-	// _ApplyChanges runs before the scene is packed for saving, so this is where the node's
-	// texture must be swapped back to the real (saveable) resource. _SaveExternalData runs
-	// after the scene has already been written to disk, so it's safe to resume drawing there.
 	private bool ResumeDrawingAfterSave = false;
 	public override void _ApplyChanges()
 	{
@@ -112,7 +109,9 @@ public partial class ImpishDrawPlugin : EditorPlugin
 					case Key.Key4:
 					case Key.Key5:
 						if(DrawingScene.PassInput(ev))
+						{
 							Viewport.SetInputAsHandled();
+						}
 						break;
 					default:
 						break;
@@ -124,7 +123,9 @@ public partial class ImpishDrawPlugin : EditorPlugin
 				if((mb.ButtonIndex == MouseButton.WheelUp || mb.ButtonIndex == MouseButton.WheelDown) && mb.CtrlPressed)
 				{
 					if(DrawingScene.PassInput(ev))
+					{
 						Viewport.SetInputAsHandled();
+					}
 				}
 				break;
 		}

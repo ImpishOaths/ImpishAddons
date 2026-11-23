@@ -1,0 +1,66 @@
+[gd_resource type="AnimationLibrary" format=3 uid="uid://biwuqdq3pq7eo"]
+
+[ext_resource type="TileSet" uid="uid://csq6q8dkjypkm" path="res://addons/ImpishPuppets/Clothes/None/NoneClothesSprites.tres" id="1_6m15f"]
+[ext_resource type="TileSet" uid="uid://br8t3hfw4vamk" path="res://addons/ImpishPuppets/Clothes/Femme/FemmeClothesSprites.tres" id="1_411bd"]
+
+[sub_resource type="Animation" id="Animation_fokrl"]
+resource_name = "Femme"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LayerArmL/Arm/LowerArm/ClothesWrist:SpriteSet")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_411bd")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LayerArmR/Arm/Arm/LowerArm/ClothesWrist:SpriteSet")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_411bd")]
+}
+
+[sub_resource type="Animation" id="Animation_411bd"]
+resource_name = "None"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LayerArmL/Arm/LowerArm/ClothesWrist:SpriteSet")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_6m15f")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LayerArmR/Arm/Arm/LowerArm/ClothesWrist:SpriteSet")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_6m15f")]
+}
+
+[resource]
+_data = {
+&"Femme": SubResource("Animation_fokrl"),
+&"None": SubResource("Animation_411bd")
+}

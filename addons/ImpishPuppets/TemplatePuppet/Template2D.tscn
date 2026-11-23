@@ -1,0 +1,2213 @@
+[gd_scene format=3 uid="uid://d3ytrccs5iu8m"]
+
+[ext_resource type="Script" uid="uid://d33ufn0f5ve5" path="res://addons/ImpishPuppets/Scripts/DeleteSelf.cs" id="1_rnag2"]
+[ext_resource type="Material" uid="uid://cckouapd7ynii" path="res://addons/PuppetShader/Reposition2D.tres" id="2_ekj2l"]
+[ext_resource type="Script" uid="uid://brsk6iag7y5s7" path="res://addons/ImpishPuppets/Scripts/DrawOrderFlip.cs" id="3_7gh6d"]
+[ext_resource type="Script" uid="uid://01ehwcyumuat" path="res://addons/ImpishPuppets/PuppetBones/IKParent.cs" id="3_wrvj3"]
+[ext_resource type="Script" uid="uid://bes7r8h7snkn0" path="res://addons/ImpishPuppets/PuppetBones/IKBone.cs" id="4_wobnj"]
+[ext_resource type="Script" uid="uid://df6pjbj5mdm2w" path="res://addons/SpriteSet/GroupSprite2D.cs" id="5_jh3bf"]
+[ext_resource type="Material" uid="uid://bvpicncfya724" path="res://addons/ImpishPuppets/TemplatePuppet/TemplateMaterial2D.tres" id="5_jol5j"]
+[ext_resource type="Texture2D" uid="uid://5frq0s0hhdo8" path="res://addons/ImpishPuppets/TemplatePuppet/TemplateImage.png" id="6_cg5di"]
+[ext_resource type="TileSet" uid="uid://dqotkfdbayutn" path="res://addons/ImpishPuppets/TemplatePuppet/TemplateSprites.tres" id="9_13x8b"]
+[ext_resource type="Script" uid="uid://b8aat3jv3u0w6" path="res://addons/ImpishPuppets/PuppetBones/Pendulum.cs" id="9_ccsoa"]
+[ext_resource type="Script" uid="uid://besocpmom3ivu" path="res://addons/ImpishPuppets/PuppetBones/Squish.cs" id="9_xqxci"]
+[ext_resource type="Resource" uid="uid://vp3mhbitjp64" path="res://addons/ImpishPuppets/TemplatePuppet/Impulse/TemplateBreastSquish.tres" id="10_6fu4y"]
+[ext_resource type="Resource" uid="uid://cpb3fk8gwvfmw" path="res://addons/ImpishPuppets/TemplatePuppet/Impulse/TemplateTailPendulum.tres" id="10_7gh6d"]
+[ext_resource type="Material" uid="uid://bua1hphv6xpa4" path="res://addons/ImpishPuppets/Clothes/Shared/ClothingMaterial.tres" id="10_ebekc"]
+[ext_resource type="AnimationLibrary" uid="uid://d3ptb83muhdru" path="res://addons/ImpishPuppets/Animations/LegAnimations.tres" id="10_stevb"]
+[ext_resource type="Texture2D" uid="uid://b2eb88i3ii72m" path="res://addons/ImpishPuppets/Clothes/None/NoneClothesImage.png" id="11_6suwt"]
+[ext_resource type="Texture2D" uid="uid://cvsebb2jd2amy" path="res://addons/ImpishPuppets/Clothes/Femme/FemmeClothesImage.png" id="11_a0ojs"]
+[ext_resource type="Resource" uid="uid://bpn2dykyw5mjp" path="res://addons/ImpishPuppets/TemplatePuppet/Impulse/TemplateGlobalImpulse.tres" id="11_ccsoa"]
+[ext_resource type="Script" uid="uid://bxwb38heft0lc" path="res://addons/ImpishPuppets/PuppetBones/PointAt.cs" id="12_7gh6d"]
+[ext_resource type="TileSet" uid="uid://csq6q8dkjypkm" path="res://addons/ImpishPuppets/Clothes/None/NoneClothesSprites.tres" id="12_iyfma"]
+[ext_resource type="Material" uid="uid://c5mybhp18dmeu" path="res://addons/ImpishPuppets/Expressions/ExpressionsMaterial.tres" id="13_0ibjr"]
+[ext_resource type="AnimationLibrary" uid="uid://do8o682uke8vm" path="res://addons/ImpishPuppets/Animations/EyebrowAnimations.tres" id="13_6uxwy"]
+[ext_resource type="Texture2D" uid="uid://crnxybb8cllxn" path="res://addons/ImpishPuppets/Expressions/ExpressionsImage.png" id="13_vg50q"]
+[ext_resource type="AnimationLibrary" uid="uid://cnsdflflabx5u" path="res://addons/ImpishPuppets/Expressions/ExpressionAnimations.tres" id="14_vg50q"]
+[ext_resource type="AnimationLibrary" uid="uid://dirbbix3mn72d" path="res://addons/ImpishPuppets/Animations/EyeAnimations.tres" id="14_ytn8p"]
+[ext_resource type="TileSet" uid="uid://cv8xbjjlpav3s" path="res://addons/ImpishPuppets/Expressions/ExpressionsSprites.tres" id="15_awfxg"]
+[ext_resource type="AnimationLibrary" uid="uid://ci7s1jon67my5" path="res://addons/ImpishPuppets/Animations/MouthAnimations.tres" id="15_giecy"]
+[ext_resource type="AnimationLibrary" uid="uid://tpg35mlp8rdy" path="res://addons/ImpishPuppets/Animations/HandAnimations.tres" id="16_f0kxl"]
+[ext_resource type="AnimationLibrary" uid="uid://luh4iale4erv" path="res://addons/ImpishPuppets/Animations/PalmAnimations.tres" id="16_surrk"]
+[ext_resource type="AnimationLibrary" uid="uid://c2gqwvgb67ucb" path="res://addons/ImpishPuppets/Animations/ArmAnimations.tres" id="17_3fwdb"]
+[ext_resource type="AnimationLibrary" uid="uid://co75a3u4ysgl7" path="res://addons/ImpishPuppets/Animations/OrderFlipAnimations.res" id="23_dqtuo"]
+[ext_resource type="AnimationLibrary" uid="uid://lhlhditeelid" path="res://addons/ImpishPuppets/Clothes/Shared/HeadClothes.tres" id="24_h7rov"]
+[ext_resource type="AnimationLibrary" uid="uid://b70eogc4esni6" path="res://addons/ImpishPuppets/Clothes/Shared/UpperClothes.tres" id="25_6suwt"]
+[ext_resource type="AnimationLibrary" uid="uid://biwuqdq3pq7eo" path="res://addons/ImpishPuppets/Clothes/Shared/ArmClothes.tres" id="26_a0ojs"]
+[ext_resource type="AnimationLibrary" uid="uid://b76qbsp40jv0s" path="res://addons/ImpishPuppets/Clothes/Shared/LowerClothes.tres" id="26_iyfma"]
+[ext_resource type="AnimationLibrary" uid="uid://cnriou01ea0ee" path="res://addons/ImpishPuppets/Clothes/Shared/LegClothes.tres" id="29_syaf5"]
+
+[sub_resource type="Animation" id="Animation_dqtuo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ExpressionScale/Expression:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ExpressionScale/Expression:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -13.415)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ExpressionScale/Expression:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ExpressionScale/Expression:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rrq4s"]
+_data = {
+&"RESET": SubResource("Animation_dqtuo")
+}
+
+[sub_resource type="Animation" id="Animation_u1kos"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:Flipped")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head:Flipped")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h7rov"]
+_data = {
+&"RESET": SubResource("Animation_u1kos")
+}
+
+[sub_resource type="Animation" id="Animation_kg4v4"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head/Head/ClothesHead:SpriteSet")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("12_iyfma")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_syaf5"]
+_data = {
+&"RESET": SubResource("Animation_kg4v4")
+}
+
+[sub_resource type="Animation" id="Animation_sdiuo"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UpperBody/ClothesUpper:SpriteSet")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("12_iyfma")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UpperBody/ClothesUpper/ClothesUpperBack:SpriteSet")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("12_iyfma")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("UpperBody/BreastR/ClothesBreast:SpriteSet")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("12_iyfma")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("UpperBody/BreastL/ClothesBreast:SpriteSet")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("12_iyfma")]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("LayerArmR/Arm/Arm/UpperArm/ClothesArm:SpriteSet")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("12_iyfma")]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("LayerArmL/Arm/UpperArm/ClothesArm:SpriteSet")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("12_iyfma")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3ooja"]
+_data = {
+&"RESET": SubResource("Animation_sdiuo")
+}
+
+[sub_resource type="Animation" id="Animation_iyfma"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LayerArmL/Arm/LowerArm/ClothesWrist:SpriteSet")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("12_iyfma")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LayerArmR/Arm/Arm/LowerArm/ClothesWrist:SpriteSet")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("12_iyfma")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a0ojs"]
+_data = {
+&"RESET": SubResource("Animation_iyfma")
+}
+
+[sub_resource type="Animation" id="Animation_a0ojs"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LowerBody/ClothesLower:SpriteSet")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("12_iyfma")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LowerBody/ClothesLower/ClothesLowerBack:SpriteSet")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("12_iyfma")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LayerLegL/Leg/UpperLeg/ClothesLeg:SpriteSet")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("12_iyfma")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LayerLegR/Leg/UpperLeg/ClothesLeg:SpriteSet")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("12_iyfma")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sdiuo"]
+_data = {
+&"RESET": SubResource("Animation_a0ojs")
+}
+
+[sub_resource type="Animation" id="Animation_syaf5"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LayerLegL/Foot/Foot:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LayerLegL/Foot/ClothesFeet:SpriteSet")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("12_iyfma")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LayerLegL/Leg/LowerLeg/ClothesLowerLeg:SpriteSet")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("12_iyfma")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LayerLegR/Foot/Foot:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("LayerLegR/Foot/ClothesFeet:SpriteSet")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("12_iyfma")]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("LayerLegR/Leg/LowerLeg/ClothesLowerLeg:SpriteSet")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("12_iyfma")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wta4p"]
+_data = {
+&"RESET": SubResource("Animation_syaf5")
+}
+
+[sub_resource type="Animation" id="Animation_stevb"]
+resource_name = "BackForward"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:z_index")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [-2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:instance_shader_parameters/Layer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Leg:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Foot:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6uxwy"]
+_data = {
+&"RESET": SubResource("Animation_stevb")
+}
+
+[sub_resource type="Animation" id="Animation_0ibjr"]
+resource_name = "FrontForward"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:z_index")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:instance_shader_parameters/Layer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Leg:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Foot:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_awfxg"]
+_data = {
+&"RESET": SubResource("Animation_0ibjr")
+}
+
+[sub_resource type="Animation" id="Animation_surrk"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:z_index")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [-1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:instance_shader_parameters/Layer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Arm:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_stevb"]
+_data = {
+&"RESET": SubResource("Animation_surrk")
+}
+
+[sub_resource type="Animation" id="Animation_3fwdb"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:z_index")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:instance_shader_parameters/Layer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Arm:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_surrk"]
+_data = {
+&"RESET": SubResource("Animation_3fwdb")
+}
+
+[sub_resource type="Animation" id="Animation_13x8b"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PalmFront:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0ibjr"]
+_data = {
+&"RESET": SubResource("Animation_13x8b")
+}
+
+[sub_resource type="Animation" id="Animation_giecy"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PalmFront:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vg50q"]
+_data = {
+&"RESET": SubResource("Animation_giecy")
+}
+
+[sub_resource type="Animation" id="Animation_vg50q"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Index:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Middle:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Ring:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pinky:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Thumb:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qms48"]
+_data = {
+&"RESET": SubResource("Animation_vg50q")
+}
+
+[sub_resource type="Animation" id="Animation_6uxwy"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Index:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Middle:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Ring:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pinky:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Thumb:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ytn8p"]
+_data = {
+&"RESET": SubResource("Animation_6uxwy")
+}
+
+[sub_resource type="Animation" id="Animation_awfxg"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Eye/EyeBrow:SpriteName")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"SlantUp"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1reiy"]
+_data = {
+&"RESET": SubResource("Animation_awfxg")
+}
+
+[sub_resource type="Animation" id="Animation_1reiy"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Eye/EyeBrow:SpriteName")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"SlantUp"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dqtuo"]
+_data = {
+&"RESET": SubResource("Animation_1reiy")
+}
+
+[sub_resource type="Animation" id="Animation_ytn8p"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Eye/Eye:SpriteName")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Eye"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Eye:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Pupil:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_giecy"]
+_data = {
+&"RESET": SubResource("Animation_ytn8p")
+}
+
+[sub_resource type="Animation" id="Animation_qms48"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Eye/Eye:SpriteName")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Eye"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Eye:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Pupil:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ebekc"]
+_data = {
+&"RESET": SubResource("Animation_qms48")
+}
+
+[sub_resource type="Animation" id="Animation_ebekc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mouth:SpriteName")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Smile"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u1kos"]
+_data = {
+&"RESET": SubResource("Animation_ebekc")
+}
+
+[node name="Template2D" type="Node2D" unique_id=1356266456]
+metadata/_edit_horizontal_guides_ = [39.04787]
+
+[node name="ShaderGlobalsOverride" type="ShaderGlobalsOverride" parent="." unique_id=1539402012]
+params/Mode2D = true
+script = ExtResource("1_rnag2")
+
+[node name="Reference" type="Sprite2D" parent="ShaderGlobalsOverride" unique_id=406944401]
+position = Vector2(-128, -128)
+texture = ExtResource("6_cg5di")
+
+[node name="ReferenceRect" type="ReferenceRect" parent="ShaderGlobalsOverride" unique_id=680644506]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1024.0
+offset_bottom = -520.0
+grow_horizontal = 2
+grow_vertical = 2
+border_color = Color(1, 1, 1, 1)
+
+[node name="Sprites" type="Node2D" parent="." unique_id=795242556]
+position = Vector2(64, 128)
+script = ExtResource("3_7gh6d")
+metadata/_custom_type_script = "uid://brsk6iag7y5s7"
+
+[node name="LowerBody" type="Node2D" parent="Sprites" unique_id=1230932308]
+position = Vector2(0, -31.965)
+
+[node name="Tail" type="Node2D" parent="Sprites/LowerBody" unique_id=584085848]
+position = Vector2(1.4715729, -6.867325)
+rotation = 0.47
+script = ExtResource("9_ccsoa")
+RotationOffset = 0.47
+Impulse = ExtResource("10_7gh6d")
+GlobalImpulse = ExtResource("11_ccsoa")
+metadata/_custom_type_script = "uid://b8aat3jv3u0w6"
+
+[node name="Tail" type="Sprite2D" parent="Sprites/LowerBody/Tail" unique_id=995064197]
+z_index = -1
+material = ExtResource("5_jol5j")
+instance_shader_parameters/Layer = 1
+texture = ExtResource("6_cg5di")
+offset = Vector2(-10.497936, 4.959709)
+region_enabled = true
+region_rect = Rect2(96, 160, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Detail"
+SpriteName = &"Tail"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="LowerBody" type="Sprite2D" parent="Sprites/LowerBody" unique_id=1328826228]
+material = ExtResource("5_jol5j")
+instance_shader_parameters/Layer = 0
+texture = ExtResource("6_cg5di")
+offset = Vector2(1.5679321, -14.315094)
+region_enabled = true
+region_rect = Rect2(0, 128, 48, 48)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Core"
+SpriteName = &"LowerBody"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="ClothesLower" type="Sprite2D" parent="Sprites/LowerBody" unique_id=1678175865]
+z_index = 2
+material = ExtResource("10_ebekc")
+instance_shader_parameters/Color2 = Color(0, 1, 0, 1)
+instance_shader_parameters/Layer = 2
+position = Vector2(1.0997314, -10.275856)
+texture = ExtResource("11_a0ojs")
+region_enabled = true
+region_rect = Rect2(0, 48, 48, 48)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("12_iyfma")
+SpriteGroup = &"Lower"
+SpriteName = &"Lower"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="ClothesLowerBack" type="Sprite2D" parent="Sprites/LowerBody/ClothesLower" unique_id=261553487]
+z_index = -1
+z_as_relative = false
+material = ExtResource("10_ebekc")
+instance_shader_parameters/Color2 = Color(0, 1, 0, 1)
+instance_shader_parameters/Layer = 1
+texture = ExtResource("11_a0ojs")
+region_enabled = true
+region_rect = Rect2(0, 48, 48, 48)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("12_iyfma")
+SpriteGroup = &"Lower"
+SpriteName = &"LowerBack"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="UpperBody" type="Node2D" parent="Sprites" unique_id=1204151930]
+position = Vector2(0, -48.01)
+
+[node name="UpperBody" type="Sprite2D" parent="Sprites/UpperBody" unique_id=56789799]
+material = ExtResource("5_jol5j")
+instance_shader_parameters/Layer = 0
+texture = ExtResource("6_cg5di")
+offset = Vector2(2.2119064, -10.090267)
+region_enabled = true
+region_rect = Rect2(0, 64, 48, 48)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Core"
+SpriteName = &"UpperBody"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="ClothesUpper" type="Sprite2D" parent="Sprites/UpperBody" unique_id=1221599852]
+z_index = 2
+material = ExtResource("10_ebekc")
+instance_shader_parameters/Color2 = Color(0, 1, 0, 1)
+instance_shader_parameters/Layer = 2
+position = Vector2(7.450581e-09, -9.459129)
+texture = ExtResource("11_a0ojs")
+region_enabled = true
+region_rect = Rect2(0, 0, 48, 48)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("12_iyfma")
+SpriteGroup = &"Upper"
+SpriteName = &"Upper"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="ClothesUpperBack" type="Sprite2D" parent="Sprites/UpperBody/ClothesUpper" unique_id=397544756]
+z_index = -1
+z_as_relative = false
+material = ExtResource("10_ebekc")
+instance_shader_parameters/Color2 = Color(0, 1, 0, 1)
+instance_shader_parameters/Layer = 1
+texture = ExtResource("11_a0ojs")
+region_enabled = true
+region_rect = Rect2(0, 0, 48, 48)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("12_iyfma")
+SpriteGroup = &"Upper"
+SpriteName = &"UpperBack"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="BreastR" type="Node2D" parent="Sprites/UpperBody" unique_id=572721961]
+position = Vector2(5.135, -12.214)
+script = ExtResource("9_xqxci")
+Impulse = ExtResource("10_6fu4y")
+GlobalImpulse = ExtResource("11_ccsoa")
+metadata/_custom_type_script = "uid://besocpmom3ivu"
+
+[node name="Breast" type="Sprite2D" parent="Sprites/UpperBody/BreastR" unique_id=48942610]
+material = ExtResource("5_jol5j")
+instance_shader_parameters/Layer = 2
+scale = Vector2(-1, 1)
+texture = ExtResource("6_cg5di")
+offset = Vector2(-3.7746909, 1.0358849)
+region_enabled = true
+region_rect = Rect2(64, 96, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Detail"
+SpriteName = &"Breast"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="ClothesBreast" type="Sprite2D" parent="Sprites/UpperBody/BreastR" unique_id=977508536]
+z_index = 2
+material = ExtResource("10_ebekc")
+instance_shader_parameters/Color2 = Color(0, 1, 0, 1)
+instance_shader_parameters/Layer = 2
+scale = Vector2(-1, 1)
+texture = ExtResource("11_a0ojs")
+region_enabled = true
+region_rect = Rect2(80, 0, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("12_iyfma")
+SpriteGroup = &"Upper"
+SpriteName = &"Breast"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="BreastL" type="Node2D" parent="Sprites/UpperBody" unique_id=586265626]
+position = Vector2(-5.325, -11.855)
+script = ExtResource("9_xqxci")
+Impulse = ExtResource("10_6fu4y")
+GlobalImpulse = ExtResource("11_ccsoa")
+metadata/_custom_type_script = "uid://besocpmom3ivu"
+
+[node name="Breast" type="Sprite2D" parent="Sprites/UpperBody/BreastL" unique_id=1772026459]
+material = ExtResource("5_jol5j")
+instance_shader_parameters/Layer = 2
+texture = ExtResource("6_cg5di")
+offset = Vector2(-3.7746909, 1.0358849)
+region_enabled = true
+region_rect = Rect2(64, 96, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Detail"
+SpriteName = &"Breast"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="ClothesBreast" type="Sprite2D" parent="Sprites/UpperBody/BreastL" unique_id=937306205]
+z_index = 2
+material = ExtResource("10_ebekc")
+instance_shader_parameters/Color2 = Color(0, 1, 0, 1)
+instance_shader_parameters/Layer = 2
+texture = ExtResource("11_a0ojs")
+region_enabled = true
+region_rect = Rect2(80, 0, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("12_iyfma")
+SpriteGroup = &"Upper"
+SpriteName = &"Breast"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="Head" type="Node2D" parent="Sprites" unique_id=1705686782]
+position = Vector2(0, -66.365)
+script = ExtResource("3_7gh6d")
+metadata/_custom_type_script = "uid://brsk6iag7y5s7"
+
+[node name="EyeTargetR" type="Node2D" parent="Sprites/Head" unique_id=1078625067]
+position = Vector2(22.545319, -11.901245)
+
+[node name="EyeTargetL" type="Node2D" parent="Sprites/Head/EyeTargetR" unique_id=32228322]
+position = Vector2(-8.137527, 0.114610896)
+
+[node name="Head" type="Node2D" parent="Sprites/Head" unique_id=1721127031]
+
+[node name="HairBack" type="Sprite2D" parent="Sprites/Head/Head" unique_id=440870521]
+material = ExtResource("5_jol5j")
+position = Vector2(1.642395, -9.616066)
+texture = ExtResource("6_cg5di")
+region_enabled = true
+region_rect = Rect2(224, 0, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Detail"
+SpriteName = &"HairBack"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="Head" type="Sprite2D" parent="Sprites/Head/Head" unique_id=503394690]
+material = ExtResource("5_jol5j")
+instance_shader_parameters/Layer = 0
+texture = ExtResource("6_cg5di")
+offset = Vector2(1.7378006, -13.379379)
+region_enabled = true
+region_rect = Rect2(0, 0, 48, 48)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Core"
+SpriteName = &"Head"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="HairFront" type="Sprite2D" parent="Sprites/Head/Head" unique_id=1003341346]
+material = ExtResource("5_jol5j")
+position = Vector2(-2.1362915, -9.446941)
+texture = ExtResource("6_cg5di")
+region_enabled = true
+region_rect = Rect2(192, 0, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Detail"
+SpriteName = &"HairFront"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="ClothesHead" type="Sprite2D" parent="Sprites/Head/Head" unique_id=1647567693]
+material = ExtResource("10_ebekc")
+instance_shader_parameters/Color2 = Color(0, 1, 0, 1)
+instance_shader_parameters/Layer = 0
+position = Vector2(-0.44670868, -9.045929)
+texture = ExtResource("11_6suwt")
+region_enabled = true
+region_rect = Rect2(80, 80, 48, 48)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("12_iyfma")
+SpriteGroup = &"Head"
+SpriteName = &"Head"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+metadata/DontOrderFlip = false
+
+[node name="Mouth" type="Sprite2D" parent="Sprites/Head" unique_id=113028271]
+material = ExtResource("5_jol5j")
+instance_shader_parameters/Layer = 0
+position = Vector2(-0.26352692, -3.0963745)
+texture = ExtResource("6_cg5di")
+offset = Vector2(0.905, -0.56)
+region_enabled = true
+region_rect = Rect2(80, 32, 16, 16)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Mouth"
+SpriteName = &"Smile"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="EyeR" type="Node2D" parent="Sprites/Head" unique_id=1745221765]
+position = Vector2(4.029236, -9.16394)
+
+[node name="EyeBack" type="Sprite2D" parent="Sprites/Head/EyeR" unique_id=574497258]
+material = ExtResource("5_jol5j")
+instance_shader_parameters/Layer = 0
+texture = ExtResource("6_cg5di")
+offset = Vector2(0.78904724, -0.11385727)
+region_enabled = true
+region_rect = Rect2(96, 16, 16, 16)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Eye"
+SpriteName = &"EyeBack"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="Eye" type="Node2D" parent="Sprites/Head/EyeR" unique_id=602067348]
+
+[node name="Eye" type="Sprite2D" parent="Sprites/Head/EyeR/Eye" unique_id=1217654862]
+material = ExtResource("5_jol5j")
+instance_shader_parameters/Layer = 0
+texture = ExtResource("6_cg5di")
+offset = Vector2(0.72270596, -0.20038366)
+region_enabled = true
+region_rect = Rect2(80, 16, 16, 16)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Eye"
+SpriteName = &"Eye"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="EyeBrow" type="Sprite2D" parent="Sprites/Head/EyeR/Eye" unique_id=385603338]
+material = ExtResource("5_jol5j")
+instance_shader_parameters/Layer = 0
+position = Vector2(0.1894455, -5.628029)
+texture = ExtResource("6_cg5di")
+region_enabled = true
+region_rect = Rect2(80, 0, 16, 16)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Eyebrow"
+SpriteName = &"SlantUp"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="Pupil" type="Node2D" parent="Sprites/Head/EyeR" unique_id=1138531160 node_paths=PackedStringArray("Target")]
+position = Vector2(0.9892502, -0.14624405)
+script = ExtResource("12_7gh6d")
+Target = NodePath("../../EyeTargetR")
+DoRotation = false
+DoExtension = true
+OffsetDist = 1.0
+metadata/_custom_type_script = "uid://bxwb38heft0lc"
+
+[node name="Pupil" type="Sprite2D" parent="Sprites/Head/EyeR/Pupil" unique_id=1653797867]
+material = ExtResource("5_jol5j")
+instance_shader_parameters/Layer = 0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_cg5di")
+region_enabled = true
+region_rect = Rect2(112, 16, 16, 16)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Eye"
+SpriteName = &"Pupil"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="Nose" type="Sprite2D" parent="Sprites/Head" unique_id=225054443]
+material = ExtResource("5_jol5j")
+instance_shader_parameters/Layer = 0
+position = Vector2(0.76007843, -7.877247)
+texture = ExtResource("6_cg5di")
+region_enabled = true
+region_rect = Rect2(64, 16, 16, 16)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Detail"
+SpriteName = &"Nose"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="EyeL" type="Node2D" parent="Sprites/Head" unique_id=1354442286]
+position = Vector2(-4.053484, -9.1060705)
+
+[node name="EyeBack" type="Sprite2D" parent="Sprites/Head/EyeL" unique_id=544375539]
+material = ExtResource("5_jol5j")
+instance_shader_parameters/Layer = 0
+texture = ExtResource("6_cg5di")
+offset = Vector2(0.78904724, -0.11385727)
+region_enabled = true
+region_rect = Rect2(96, 16, 16, 16)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Eye"
+SpriteName = &"EyeBack"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="Eye" type="Node2D" parent="Sprites/Head/EyeL" unique_id=1163642108]
+
+[node name="Eye" type="Sprite2D" parent="Sprites/Head/EyeL/Eye" unique_id=112226739]
+material = ExtResource("5_jol5j")
+instance_shader_parameters/Layer = 0
+texture = ExtResource("6_cg5di")
+offset = Vector2(0.72270596, -0.20038366)
+region_enabled = true
+region_rect = Rect2(80, 16, 16, 16)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Eye"
+SpriteName = &"Eye"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="EyeBrow" type="Sprite2D" parent="Sprites/Head/EyeL/Eye" unique_id=605199171]
+material = ExtResource("5_jol5j")
+instance_shader_parameters/Layer = 0
+position = Vector2(0.25834274, -5.736375)
+scale = Vector2(-1, 1)
+texture = ExtResource("6_cg5di")
+region_enabled = true
+region_rect = Rect2(80, 0, 16, 16)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Eyebrow"
+SpriteName = &"SlantUp"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="Pupil" type="Node2D" parent="Sprites/Head/EyeL" unique_id=1678151707 node_paths=PackedStringArray("Target")]
+position = Vector2(0.989624, -0.14369202)
+script = ExtResource("12_7gh6d")
+Target = NodePath("../../EyeTargetR/EyeTargetL")
+DoRotation = false
+DoExtension = true
+OffsetDist = 1.0
+metadata/_custom_type_script = "uid://bxwb38heft0lc"
+
+[node name="Pupil" type="Sprite2D" parent="Sprites/Head/EyeL/Pupil" unique_id=779065798]
+material = ExtResource("5_jol5j")
+instance_shader_parameters/Layer = 0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_cg5di")
+region_enabled = true
+region_rect = Rect2(112, 16, 16, 16)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Eye"
+SpriteName = &"Pupil"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="ExpressionScale" type="Node2D" parent="Sprites/Head" unique_id=1744196043]
+position = Vector2(0.4459381, -8.769974)
+
+[node name="Expression" type="Sprite2D" parent="Sprites/Head/ExpressionScale" unique_id=1471380506]
+visible = false
+material = ExtResource("13_0ibjr")
+instance_shader_parameters/Color1 = Color(1, 0.8666667, 0, 1)
+position = Vector2(0, -13.415)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("13_vg50q")
+offset = Vector2(0, -16)
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("15_awfxg")
+SpriteGroup = &"Expressions"
+SpriteName = &"Exclaimation"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="LayerLegR" type="CanvasGroup" parent="Sprites" unique_id=827282871]
+z_index = -2
+material = ExtResource("2_ekj2l")
+instance_shader_parameters/Layer = 1
+
+[node name="Leg" type="Node2D" parent="Sprites/LayerLegR" unique_id=1330212059 node_paths=PackedStringArray("Target")]
+process_priority = 100
+position = Vector2(4.182472, -37.98716)
+script = ExtResource("3_wrvj3")
+Editing = false
+Target = NodePath("../Foot/Ankle")
+RootSlack = 1.0
+metadata/_custom_type_script = "uid://01ehwcyumuat"
+
+[node name="UpperLeg" type="Node2D" parent="Sprites/LayerLegR/Leg" unique_id=1965813627]
+position = Vector2(0.21750201, 0.97605985)
+rotation = 1.3392379
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("4_wobnj")
+metadata/_custom_type_script = "uid://bes7r8h7snkn0"
+
+[node name="UpperLeg" type="Sprite2D" parent="Sprites/LayerLegR/Leg/UpperLeg" unique_id=613257299]
+material = ExtResource("5_jol5j")
+rotation = -0.7941248
+texture = ExtResource("6_cg5di")
+offset = Vector2(5.661476, 8.677067)
+region_enabled = true
+region_rect = Rect2(64, 128, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Core"
+SpriteName = &"UpperLeg"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="ClothesLeg" type="Sprite2D" parent="Sprites/LayerLegR/Leg/UpperLeg" unique_id=2127206730]
+material = ExtResource("10_ebekc")
+instance_shader_parameters/Color2 = Color(0, 1, 0, 1)
+texture = ExtResource("11_a0ojs")
+region_enabled = true
+region_rect = Rect2(48, 48, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("12_iyfma")
+SpriteGroup = &"Lower"
+SpriteName = &"Leg"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+metadata/DontOrderFlip = false
+
+[node name="LowerLeg" type="Node2D" parent="Sprites/LayerLegR/Leg" unique_id=445293024]
+position = Vector2(3.543754, 15.083033)
+rotation = 1.4392381
+script = ExtResource("4_wobnj")
+RotationLimit = -0.1
+InitialTransform = Transform2D(1, 0, 0, 1, 14.462036, -0.95923615)
+metadata/_custom_type_script = "uid://bes7r8h7snkn0"
+
+[node name="LowerLeg" type="Sprite2D" parent="Sprites/LayerLegR/Leg/LowerLeg" unique_id=1352070182]
+material = ExtResource("5_jol5j")
+rotation = -1.5707964
+texture = ExtResource("6_cg5di")
+offset = Vector2(-0.101696014, 9.016148)
+region_enabled = true
+region_rect = Rect2(96, 128, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Core"
+SpriteName = &"LowerLeg"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="ClothesLowerLeg" type="Sprite2D" parent="Sprites/LayerLegR/Leg/LowerLeg" unique_id=520232226]
+material = ExtResource("10_ebekc")
+instance_shader_parameters/Color2 = Color(0, 1, 0, 1)
+position = Vector2(6.329482, -0.074819535)
+texture = ExtResource("11_6suwt")
+region_enabled = true
+region_rect = Rect2(32, 96, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("12_iyfma")
+SpriteGroup = &"Feet"
+SpriteName = &"Leg"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+metadata/DontOrderFlip = false
+
+[node name="Ankle" type="Node2D" parent="Sprites/LayerLegR/Leg" unique_id=1785306808]
+position = Vector2(5.04406, 26.421284)
+rotation = 1.4392381
+script = ExtResource("4_wobnj")
+InitialTransform = Transform2D(1, 0, 0, 1, 25.886856, -0.42978668)
+metadata/_custom_type_script = "uid://bes7r8h7snkn0"
+
+[node name="Foot" type="Node2D" parent="Sprites/LayerLegR" unique_id=2013114391]
+position = Vector2(9.885, 0)
+
+[node name="Ankle" type="Node2D" parent="Sprites/LayerLegR/Foot" unique_id=1329081648]
+position = Vector2(-0.62085485, -10.435762)
+
+[node name="Foot" type="Sprite2D" parent="Sprites/LayerLegR/Foot" unique_id=1355348263]
+material = ExtResource("5_jol5j")
+texture = ExtResource("6_cg5di")
+offset = Vector2(2.991127, -6.8116074)
+region_enabled = true
+region_rect = Rect2(64, 160, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Core"
+SpriteName = &"Foot"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="ClothesFeet" type="Sprite2D" parent="Sprites/LayerLegR/Foot" unique_id=215531855]
+material = ExtResource("10_ebekc")
+instance_shader_parameters/Color2 = Color(0, 1, 0, 1)
+texture = ExtResource("11_6suwt")
+offset = Vector2(3.470543, -10.546814)
+region_enabled = true
+region_rect = Rect2(0, 96, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("12_iyfma")
+SpriteGroup = &"Feet"
+SpriteName = &"Feet"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="LayerLegL" type="CanvasGroup" parent="Sprites" unique_id=208563272]
+z_index = 1
+material = ExtResource("2_ekj2l")
+instance_shader_parameters/Layer = 2
+
+[node name="Leg" type="Node2D" parent="Sprites/LayerLegL" unique_id=692493369 node_paths=PackedStringArray("Target")]
+process_priority = 100
+position = Vector2(-7.1285324, -38.23285)
+script = ExtResource("3_wrvj3")
+Editing = false
+Target = NodePath("../Foot/Ankle")
+RootSlack = 1.0
+metadata/_custom_type_script = "uid://01ehwcyumuat"
+
+[node name="UpperLeg" type="Node2D" parent="Sprites/LayerLegL/Leg" unique_id=672773129]
+position = Vector2(0.17371064, 0.9847967)
+rotation = 1.4258988
+script = ExtResource("4_wobnj")
+metadata/_custom_type_script = "uid://bes7r8h7snkn0"
+
+[node name="UpperLeg" type="Sprite2D" parent="Sprites/LayerLegL/Leg/UpperLeg" unique_id=2057329895]
+material = ExtResource("5_jol5j")
+rotation = -0.76096356
+texture = ExtResource("6_cg5di")
+offset = Vector2(5.661476, 8.677067)
+region_enabled = true
+region_rect = Rect2(64, 128, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Core"
+SpriteName = &"UpperLeg"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="ClothesLeg" type="Sprite2D" parent="Sprites/LayerLegL/Leg/UpperLeg" unique_id=1907883553]
+material = ExtResource("10_ebekc")
+instance_shader_parameters/Color2 = Color(0, 1, 0, 1)
+texture = ExtResource("11_a0ojs")
+region_enabled = true
+region_rect = Rect2(48, 48, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("12_iyfma")
+SpriteGroup = &"Lower"
+SpriteName = &"Leg"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+metadata/DontOrderFlip = false
+
+[node name="LowerLeg" type="Node2D" parent="Sprites/LayerLegL/Leg" unique_id=621287684]
+position = Vector2(2.3380477, 15.817132)
+rotation = 1.7873306
+script = ExtResource("4_wobnj")
+RotationLimit = -0.1
+InitialTransform = Transform2D(1, 0, 0, 1, 14.9880295, -0.20367432)
+metadata/_custom_type_script = "uid://bes7r8h7snkn0"
+
+[node name="LowerLeg" type="Sprite2D" parent="Sprites/LayerLegL/Leg/LowerLeg" unique_id=2136687944]
+material = ExtResource("5_jol5j")
+rotation = -1.5707964
+texture = ExtResource("6_cg5di")
+offset = Vector2(-0.101696014, 9.016148)
+region_enabled = true
+region_rect = Rect2(96, 128, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Core"
+SpriteName = &"LowerLeg"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="ClothesLowerLeg" type="Sprite2D" parent="Sprites/LayerLegL/Leg/LowerLeg" unique_id=266548619]
+material = ExtResource("10_ebekc")
+instance_shader_parameters/Color2 = Color(0, 1, 0, 1)
+position = Vector2(6.329482, -0.074819535)
+texture = ExtResource("11_6suwt")
+region_enabled = true
+region_rect = Rect2(32, 96, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("12_iyfma")
+SpriteGroup = &"Feet"
+SpriteName = &"Leg"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+metadata/DontOrderFlip = false
+
+[node name="Ankle" type="Node2D" parent="Sprites/LayerLegL/Leg" unique_id=1461006146]
+position = Vector2(-0.27130103, 27.678713)
+rotation = 1.7873306
+script = ExtResource("4_wobnj")
+InitialTransform = Transform2D(1, 0, 0, 1, 27.097626, 0.7255707)
+metadata/_custom_type_script = "uid://bes7r8h7snkn0"
+
+[node name="Foot" type="Node2D" parent="Sprites/LayerLegL" unique_id=1029393399]
+position = Vector2(-7.105, 0)
+
+[node name="Ankle" type="Node2D" parent="Sprites/LayerLegL/Foot" unique_id=147115760]
+position = Vector2(-0.2946701, -10.5532)
+
+[node name="Foot" type="Sprite2D" parent="Sprites/LayerLegL/Foot" unique_id=1386275883]
+material = ExtResource("5_jol5j")
+texture = ExtResource("6_cg5di")
+offset = Vector2(2.991127, -6.8116074)
+region_enabled = true
+region_rect = Rect2(64, 160, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Core"
+SpriteName = &"Foot"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="ClothesFeet" type="Sprite2D" parent="Sprites/LayerLegL/Foot" unique_id=1869205748]
+material = ExtResource("10_ebekc")
+instance_shader_parameters/Color2 = Color(0, 1, 0, 1)
+texture = ExtResource("11_6suwt")
+offset = Vector2(3.470543, -10.546814)
+region_enabled = true
+region_rect = Rect2(0, 96, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("12_iyfma")
+SpriteGroup = &"Feet"
+SpriteName = &"Feet"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="LayerArmR" type="CanvasGroup" parent="Sprites" unique_id=2125496875]
+z_index = -1
+material = ExtResource("2_ekj2l")
+instance_shader_parameters/Layer = 1
+
+[node name="Arm" type="Node2D" parent="Sprites/LayerArmR" unique_id=241829074]
+position = Vector2(9.134499, -62.261)
+
+[node name="Arm" type="Node2D" parent="Sprites/LayerArmR/Arm" unique_id=1312575012 node_paths=PackedStringArray("Target")]
+process_priority = 100
+scale = Vector2(1, -1)
+script = ExtResource("3_wrvj3")
+Editing = false
+Target = NodePath("../../Hand/Hand")
+RootSlack = 1.0
+metadata/_custom_type_script = "uid://01ehwcyumuat"
+
+[node name="UpperArm" type="Node2D" parent="Sprites/LayerArmR/Arm/Arm" unique_id=438727720]
+position = Vector2(-0.33314323, 0.6100197)
+rotation = -0.3124794
+script = ExtResource("4_wobnj")
+metadata/_custom_type_script = "uid://bes7r8h7snkn0"
+
+[node name="UpperArm" type="Sprite2D" parent="Sprites/LayerArmR/Arm/Arm/UpperArm" unique_id=943193209]
+material = ExtResource("5_jol5j")
+rotation = -0.13962634
+texture = ExtResource("6_cg5di")
+offset = Vector2(5.8943253, -1.4717064)
+region_enabled = true
+region_rect = Rect2(64, 64, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Core"
+SpriteName = &"UpperArm"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="ClothesArm" type="Sprite2D" parent="Sprites/LayerArmR/Arm/Arm/UpperArm" unique_id=2089756480]
+material = ExtResource("10_ebekc")
+instance_shader_parameters/Color2 = Color(0, 1, 0, 1)
+texture = ExtResource("11_a0ojs")
+offset = Vector2(0.148, 0.746)
+region_enabled = true
+region_rect = Rect2(48, 0, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("12_iyfma")
+SpriteGroup = &"Upper"
+SpriteName = &"Arm"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+metadata/DontOrderFlip = false
+
+[node name="LowerArm" type="Node2D" parent="Sprites/LayerArmR/Arm/Arm" unique_id=1547629460]
+position = Vector2(9.835434, -2.6750765)
+rotation = 1.1237034
+script = ExtResource("4_wobnj")
+RotationLimit = -0.1
+InitialTransform = Transform2D(1, 0, 0, 1, 10.5017395, 1.976181)
+metadata/_custom_type_script = "uid://bes7r8h7snkn0"
+
+[node name="LowerArm" type="Sprite2D" parent="Sprites/LayerArmR/Arm/Arm/LowerArm" unique_id=387660160]
+material = ExtResource("5_jol5j")
+texture = ExtResource("6_cg5di")
+offset = Vector2(6.178482, -0.38139725)
+region_enabled = true
+region_rect = Rect2(96, 64, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Core"
+SpriteName = &"LowerArm"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="ClothesWrist" type="Sprite2D" parent="Sprites/LayerArmR/Arm/Arm/LowerArm" unique_id=804544532]
+material = ExtResource("10_ebekc")
+position = Vector2(7.423348, 1.3739456)
+texture = ExtResource("11_6suwt")
+region_enabled = true
+region_rect = Rect2(80, 32, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("12_iyfma")
+SpriteGroup = &"Arm"
+SpriteName = &"Wrist"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+metadata/DontOrderFlip = false
+
+[node name="Wrist" type="Node2D" parent="Sprites/LayerArmR/Arm/Arm" unique_id=380145930]
+position = Vector2(15.441444, 9.016908)
+rotation = 1.1237034
+script = ExtResource("4_wobnj")
+InitialTransform = Transform2D(1, 0, 0, 1, 23.46354, 2.3248672)
+metadata/_custom_type_script = "uid://bes7r8h7snkn0"
+
+[node name="Hand" type="Node2D" parent="Sprites/LayerArmR" unique_id=1714791297]
+position = Vector2(24.575947, -71.27791)
+rotation = 0.96049225
+scale = Vector2(-1, 1)
+
+[node name="Hand" type="Node2D" parent="Sprites/LayerArmR/Hand" unique_id=706037982]
+
+[node name="PalmBack" type="Sprite2D" parent="Sprites/LayerArmR/Hand/Hand" unique_id=74112523]
+material = ExtResource("5_jol5j")
+texture = ExtResource("6_cg5di")
+offset = Vector2(-0.0639801, -6.2408752)
+region_enabled = true
+region_rect = Rect2(128, 64, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Hand"
+SpriteName = &"Palm"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="Index" type="Node2D" parent="Sprites/LayerArmR/Hand/Hand" unique_id=1131416313]
+position = Vector2(3.6239817, -6.0228066)
+
+[node name="Index" type="Sprite2D" parent="Sprites/LayerArmR/Hand/Hand/Index" unique_id=296918841]
+material = ExtResource("5_jol5j")
+rotation = 0.15505122
+texture = ExtResource("6_cg5di")
+offset = Vector2(-0.08613205, 0.6778145)
+region_enabled = true
+region_rect = Rect2(160, 64, 16, 16)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Hand"
+SpriteName = &"Finger"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="Middle" type="Node2D" parent="Sprites/LayerArmR/Hand/Hand" unique_id=798207201]
+position = Vector2(0.14360303, -6.8800364)
+
+[node name="Middle" type="Sprite2D" parent="Sprites/LayerArmR/Hand/Hand/Middle" unique_id=733505745]
+material = ExtResource("5_jol5j")
+rotation = -0.00739895
+texture = ExtResource("6_cg5di")
+offset = Vector2(-0.08613205, 0.6778145)
+region_enabled = true
+region_rect = Rect2(160, 64, 16, 16)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Hand"
+SpriteName = &"Finger"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="Ring" type="Node2D" parent="Sprites/LayerArmR/Hand/Hand" unique_id=1820956930]
+position = Vector2(-2.8704748, -6.4871626)
+
+[node name="Ring" type="Sprite2D" parent="Sprites/LayerArmR/Hand/Hand/Ring" unique_id=1637986871]
+material = ExtResource("5_jol5j")
+rotation = -0.1905944
+texture = ExtResource("6_cg5di")
+offset = Vector2(-0.08613205, 0.6778145)
+region_enabled = true
+region_rect = Rect2(160, 64, 16, 16)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Hand"
+SpriteName = &"Finger"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="Pinky" type="Node2D" parent="Sprites/LayerArmR/Hand/Hand" unique_id=2010980516]
+position = Vector2(-5.304549, -4.389575)
+
+[node name="Pinky" type="Sprite2D" parent="Sprites/LayerArmR/Hand/Hand/Pinky" unique_id=311819247]
+material = ExtResource("5_jol5j")
+rotation = -0.5834869
+texture = ExtResource("6_cg5di")
+offset = Vector2(-0.08613205, 0.6778145)
+region_enabled = true
+region_rect = Rect2(160, 64, 16, 16)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Hand"
+SpriteName = &"Finger"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="Thumb" type="Node2D" parent="Sprites/LayerArmR/Hand/Hand" unique_id=174312805]
+position = Vector2(4.742524, -1.891006)
+
+[node name="Thumb" type="Sprite2D" parent="Sprites/LayerArmR/Hand/Hand/Thumb" unique_id=1099834565]
+material = ExtResource("5_jol5j")
+texture = ExtResource("6_cg5di")
+offset = Vector2(-0.31147385, -1.6221619)
+region_enabled = true
+region_rect = Rect2(160, 80, 16, 16)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Hand"
+SpriteName = &"Thumb"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="PalmFront" type="Sprite2D" parent="Sprites/LayerArmR/Hand/Hand" unique_id=707900151]
+visible = false
+material = ExtResource("5_jol5j")
+texture = ExtResource("6_cg5di")
+offset = Vector2(-0.0639801, -6.2408752)
+region_enabled = true
+region_rect = Rect2(128, 64, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Hand"
+SpriteName = &"Palm"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="LayerArmL" type="CanvasGroup" parent="Sprites" unique_id=814182090]
+z_index = 2
+material = ExtResource("2_ekj2l")
+instance_shader_parameters/Layer = 2
+
+[node name="Arm" type="Node2D" parent="Sprites/LayerArmL" unique_id=464423561 node_paths=PackedStringArray("Target")]
+process_priority = 100
+position = Vector2(-8.787254, -62.261)
+script = ExtResource("3_wrvj3")
+Editing = false
+Target = NodePath("../Hand")
+RootSlack = 1.0
+metadata/_custom_type_script = "uid://01ehwcyumuat"
+
+[node name="UpperArm" type="Node2D" parent="Sprites/LayerArmL/Arm" unique_id=343553884]
+position = Vector2(-0.89264965, 0.021934181)
+rotation = 3.114208
+script = ExtResource("4_wobnj")
+metadata/_custom_type_script = "uid://bes7r8h7snkn0"
+
+[node name="UpperArm" type="Sprite2D" parent="Sprites/LayerArmL/Arm/UpperArm" unique_id=503242181]
+material = ExtResource("5_jol5j")
+rotation = -0.16580628
+texture = ExtResource("6_cg5di")
+offset = Vector2(5.8943253, -1.4717064)
+region_enabled = true
+region_rect = Rect2(64, 64, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Core"
+SpriteName = &"UpperArm"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="ClothesArm" type="Sprite2D" parent="Sprites/LayerArmL/Arm/UpperArm" unique_id=1866874049]
+material = ExtResource("10_ebekc")
+instance_shader_parameters/Color2 = Color(0, 1, 0, 1)
+rotation = -0.15025438
+scale = Vector2(1.0000001, 1.0000001)
+texture = ExtResource("11_a0ojs")
+offset = Vector2(0.148, 0.746)
+region_enabled = true
+region_rect = Rect2(48, 0, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("12_iyfma")
+SpriteGroup = &"Upper"
+SpriteName = &"Arm"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+metadata/DontOrderFlip = false
+
+[node name="LowerArm" type="Node2D" parent="Sprites/LayerArmL/Arm" unique_id=1800675213]
+position = Vector2(-12.62607, 0.34333035)
+rotation = -2.3566976
+script = ExtResource("4_wobnj")
+RotationLimit = -0.1
+InitialTransform = Transform2D(1, 0, 0, 1, 11.73661, 0.16858673)
+metadata/_custom_type_script = "uid://bes7r8h7snkn0"
+
+[node name="LowerArm" type="Sprite2D" parent="Sprites/LayerArmL/Arm/LowerArm" unique_id=1476407466]
+material = ExtResource("5_jol5j")
+texture = ExtResource("6_cg5di")
+offset = Vector2(6.178482, -0.38139725)
+region_enabled = true
+region_rect = Rect2(96, 64, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Core"
+SpriteName = &"LowerArm"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="ClothesWrist" type="Sprite2D" parent="Sprites/LayerArmL/Arm/LowerArm" unique_id=1364303471]
+material = ExtResource("10_ebekc")
+position = Vector2(7.423348, 1.3739456)
+texture = ExtResource("11_6suwt")
+region_enabled = true
+region_rect = Rect2(80, 32, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("12_iyfma")
+SpriteGroup = &"Arm"
+SpriteName = &"Wrist"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+metadata/DontOrderFlip = false
+
+[node name="Wrist" type="Node2D" parent="Sprites/LayerArmL/Arm" unique_id=264166459]
+position = Vector2(-22.118702, -9.139754)
+rotation = -2.3566976
+script = ExtResource("4_wobnj")
+InitialTransform = Transform2D(1, 0, 0, 1, 25.13961, 0.7998581)
+metadata/_custom_type_script = "uid://bes7r8h7snkn0"
+
+[node name="Hand" type="Node2D" parent="Sprites/LayerArmL" unique_id=476554846]
+position = Vector2(-30.905952, -71.40076)
+rotation = 5.2297482
+
+[node name="PalmBack" type="Sprite2D" parent="Sprites/LayerArmL/Hand" unique_id=1813135071]
+material = ExtResource("5_jol5j")
+texture = ExtResource("6_cg5di")
+offset = Vector2(-0.0639801, -6.2408752)
+region_enabled = true
+region_rect = Rect2(128, 64, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Hand"
+SpriteName = &"Palm"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="Index" type="Node2D" parent="Sprites/LayerArmL/Hand" unique_id=185792208]
+position = Vector2(3.7851477, -6.3006415)
+
+[node name="Index" type="Sprite2D" parent="Sprites/LayerArmL/Hand/Index" unique_id=1133625515]
+material = ExtResource("5_jol5j")
+rotation = 0.18341199
+texture = ExtResource("6_cg5di")
+offset = Vector2(-0.08613205, 0.6778145)
+region_enabled = true
+region_rect = Rect2(160, 64, 16, 16)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Hand"
+SpriteName = &"Finger"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="Middle" type="Node2D" parent="Sprites/LayerArmL/Hand" unique_id=1634183381]
+position = Vector2(0.4630118, -7.0128837)
+
+[node name="Middle" type="Sprite2D" parent="Sprites/LayerArmL/Hand/Middle" unique_id=814673633]
+material = ExtResource("5_jol5j")
+rotation = -0.050237447
+texture = ExtResource("6_cg5di")
+offset = Vector2(-0.08613205, 0.6778145)
+region_enabled = true
+region_rect = Rect2(160, 64, 16, 16)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Hand"
+SpriteName = &"Finger"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="Ring" type="Node2D" parent="Sprites/LayerArmL/Hand" unique_id=940729562]
+position = Vector2(-2.8304849, -6.4171886)
+
+[node name="Ring" type="Sprite2D" parent="Sprites/LayerArmL/Hand/Ring" unique_id=1805619751]
+material = ExtResource("5_jol5j")
+rotation = -0.29612494
+texture = ExtResource("6_cg5di")
+offset = Vector2(-0.08613205, 0.6778145)
+region_enabled = true
+region_rect = Rect2(160, 64, 16, 16)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Hand"
+SpriteName = &"Finger"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="Pinky" type="Node2D" parent="Sprites/LayerArmL/Hand" unique_id=623877026]
+position = Vector2(-5.379084, -4.5327444)
+
+[node name="Pinky" type="Sprite2D" parent="Sprites/LayerArmL/Hand/Pinky" unique_id=680729872]
+material = ExtResource("5_jol5j")
+rotation = -0.55621
+texture = ExtResource("6_cg5di")
+offset = Vector2(-0.08613205, 0.6778145)
+region_enabled = true
+region_rect = Rect2(160, 64, 16, 16)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Hand"
+SpriteName = &"Finger"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="Thumb" type="Node2D" parent="Sprites/LayerArmL/Hand" unique_id=928937981]
+position = Vector2(4.8397727, -1.6167713)
+
+[node name="Thumb" type="Sprite2D" parent="Sprites/LayerArmL/Hand/Thumb" unique_id=1498898086]
+material = ExtResource("5_jol5j")
+rotation = 0.14719811
+texture = ExtResource("6_cg5di")
+offset = Vector2(-0.31147385, -1.6221619)
+region_enabled = true
+region_rect = Rect2(160, 80, 16, 16)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Hand"
+SpriteName = &"Thumb"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="PalmFront" type="Sprite2D" parent="Sprites/LayerArmL/Hand" unique_id=1043835502]
+visible = false
+material = ExtResource("5_jol5j")
+texture = ExtResource("6_cg5di")
+offset = Vector2(-0.0639801, -6.2408752)
+region_enabled = true
+region_rect = Rect2(128, 64, 32, 32)
+region_filter_clip_enabled = true
+script = ExtResource("5_jh3bf")
+SpriteSet = ExtResource("9_13x8b")
+SpriteGroup = &"Hand"
+SpriteName = &"Palm"
+metadata/_custom_type_script = "uid://df6pjbj5mdm2w"
+
+[node name="ExpressionAnimator" type="AnimationPlayer" parent="." unique_id=347573131]
+root_node = NodePath("../Sprites/Head")
+libraries/ = SubResource("AnimationLibrary_rrq4s")
+libraries/Expressions = ExtResource("14_vg50q")
+
+[node name="OrderFlipAnimator" type="AnimationPlayer" parent="." unique_id=420374953]
+root_node = NodePath("../Sprites")
+libraries/ = SubResource("AnimationLibrary_h7rov")
+libraries/OrderFlip = ExtResource("23_dqtuo")
+
+[node name="HeadClothes" type="AnimationPlayer" parent="." unique_id=349682969]
+root_node = NodePath("../Sprites")
+libraries/ = SubResource("AnimationLibrary_syaf5")
+libraries/Head = ExtResource("24_h7rov")
+
+[node name="UpperClothes" type="AnimationPlayer" parent="." unique_id=1592676750]
+root_node = NodePath("../Sprites")
+libraries/ = SubResource("AnimationLibrary_3ooja")
+libraries/Upper = ExtResource("25_6suwt")
+
+[node name="ArmClothes" type="AnimationPlayer" parent="." unique_id=604884775]
+root_node = NodePath("../Sprites")
+libraries/ = SubResource("AnimationLibrary_a0ojs")
+libraries/Arm = ExtResource("26_a0ojs")
+
+[node name="LowerClothes" type="AnimationPlayer" parent="." unique_id=35288389]
+root_node = NodePath("../Sprites")
+libraries/ = SubResource("AnimationLibrary_sdiuo")
+libraries/Lower = ExtResource("26_iyfma")
+
+[node name="LegClothes" type="AnimationPlayer" parent="." unique_id=1634431904]
+root_node = NodePath("../Sprites")
+libraries/ = SubResource("AnimationLibrary_wta4p")
+libraries/Leg = ExtResource("29_syaf5")
+
+[node name="LegRAnimator" type="AnimationPlayer" parent="." unique_id=1825948919]
+root_node = NodePath("../Sprites/LayerLegR")
+libraries/ = SubResource("AnimationLibrary_6uxwy")
+libraries/Leg = ExtResource("10_stevb")
+
+[node name="LegLAnimator" type="AnimationPlayer" parent="." unique_id=841020879]
+root_node = NodePath("../Sprites/LayerLegL")
+libraries/ = SubResource("AnimationLibrary_awfxg")
+libraries/Leg = ExtResource("10_stevb")
+
+[node name="ArmRAnimator" type="AnimationPlayer" parent="." unique_id=2111084179]
+root_node = NodePath("../Sprites/LayerArmR")
+libraries/ = SubResource("AnimationLibrary_stevb")
+libraries/Arm = ExtResource("17_3fwdb")
+
+[node name="ArmLAnimator" type="AnimationPlayer" parent="." unique_id=890970618]
+root_node = NodePath("../Sprites/LayerArmL")
+libraries/ = SubResource("AnimationLibrary_surrk")
+libraries/Arm = ExtResource("17_3fwdb")
+
+[node name="PalmRAnimator" type="AnimationPlayer" parent="." unique_id=1732019853]
+root_node = NodePath("../Sprites/LayerArmR/Hand/Hand")
+libraries/ = SubResource("AnimationLibrary_0ibjr")
+libraries/Palm = ExtResource("16_surrk")
+
+[node name="PalmLAnimator" type="AnimationPlayer" parent="." unique_id=1752747849]
+root_node = NodePath("../Sprites/LayerArmL/Hand")
+libraries/ = SubResource("AnimationLibrary_vg50q")
+libraries/Palm = ExtResource("16_surrk")
+
+[node name="HandRAnimator" type="AnimationPlayer" parent="." unique_id=861452225]
+root_node = NodePath("../Sprites/LayerArmR/Hand/Hand")
+libraries/ = SubResource("AnimationLibrary_qms48")
+libraries/Hand = ExtResource("16_f0kxl")
+
+[node name="HandLAnimator" type="AnimationPlayer" parent="." unique_id=2142384415]
+root_node = NodePath("../Sprites/LayerArmL/Hand")
+libraries/ = SubResource("AnimationLibrary_ytn8p")
+libraries/Hand = ExtResource("16_f0kxl")
+
+[node name="EyebrowRAnimator" type="AnimationPlayer" parent="." unique_id=1378743927]
+root_node = NodePath("../Sprites/Head/EyeR")
+libraries/ = SubResource("AnimationLibrary_1reiy")
+libraries/Eyebrow = ExtResource("13_6uxwy")
+
+[node name="EyebrowLAnimator" type="AnimationPlayer" parent="." unique_id=388278074]
+root_node = NodePath("../Sprites/Head/EyeL")
+libraries/ = SubResource("AnimationLibrary_dqtuo")
+libraries/Eyebrow = ExtResource("13_6uxwy")
+
+[node name="EyeRAnimator" type="AnimationPlayer" parent="." unique_id=1002076793]
+root_node = NodePath("../Sprites/Head/EyeR")
+libraries/ = SubResource("AnimationLibrary_giecy")
+libraries/Eye = ExtResource("14_ytn8p")
+
+[node name="EyeLAnimator" type="AnimationPlayer" parent="." unique_id=1093205453]
+root_node = NodePath("../Sprites/Head/EyeL")
+libraries/ = SubResource("AnimationLibrary_ebekc")
+libraries/Eye = ExtResource("14_ytn8p")
+
+[node name="MouthAnimator" type="AnimationPlayer" parent="." unique_id=1614210997]
+root_node = NodePath("../Sprites/Head")
+libraries/ = SubResource("AnimationLibrary_u1kos")
+libraries/Mouth = ExtResource("15_giecy")

@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bua1hphv6xpa4"]
+
+[ext_resource type="Shader" uid="uid://o3bns1pyq43m" path="res://addons/PuppetShader/Puppet2DCustom.gdshader" id="1_ts32s"]
+
+[resource]
+shader = ExtResource("1_ts32s")
+shader_parameter/RegionSize = Vector2(128, 128)

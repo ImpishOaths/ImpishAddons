@@ -179,7 +179,6 @@ public class BrushTool: BrushLikeTool
 
     public override (Image Output, Rect2I Region, DrawingTool NextTool) End()
     {
-        //AddToDrawing(PreviousPos.Value, pos);
         _Began = false;
         return (DrawingImage, Region, null);
     }
@@ -189,9 +188,6 @@ public class LineTool: BrushLikeTool
 {
     public override string Name => RightDown ? "Texture Erase Spline" : "Texture Draw Spline";
 
-    // An anchor is a fixed spline point plus its (mirrored) handle offset: the out-tangent is
-    // Position + HandleOffset, the in-tangent is Position - HandleOffset. A zero offset means the
-    // segments touching this anchor stay straight through it.
     private class Anchor
     {
         public Vector2 Position;
@@ -224,8 +220,6 @@ public class LineTool: BrushLikeTool
 
     public override (Image Output, Rect2I Region, DrawingTool NextTool) End()
     {
-        // If the primary button lets go while a handle is still being dragged, just settle for a
-        // sharp point there rather than leaving the last segment in a half-shaped state.
         EditingHandle = false;
         DrawSpline();
         _Began = false;
@@ -260,8 +254,6 @@ public class LineTool: BrushLikeTool
 
         var polyline = BuildPolyline();
 
-        // Segments can overlap near shared anchors/joints; accumulate with Max like BrushTool
-        // does so a joint doesn't get double-strength from two adjoining segments.
         Dictionary<Vector2I, float> combined = [];
         for(int i = 0; i < polyline.Count - 1; ++i)
         {
@@ -297,10 +289,6 @@ public class LineTool: BrushLikeTool
         }
         if(! EditingHandle && Anchors.Count == 1)
         {
-            // Live rubber-band preview only exists before any anchor has been placed, matching
-            // plain straight-line drawing. Once an anchor exists, the segment leading away from it
-            // stays hidden until the next anchor actually gets placed (or never appears at all if
-            // the stroke ends first) rather than continuously previewing toward the cursor.
             Anchor last = Anchors[^1];
             AppendBezier(polyline, last.Position, last.Position + last.HandleOffset, CurrentPos, CurrentPos);
         }
@@ -344,12 +332,6 @@ public class FillTool: BrushLikeTool
 
     private static readonly Vector2I[] NeighborOffsets = [Vector2I.Up, Vector2I.Down, Vector2I.Left, Vector2I.Right];
 
-    // Flood fill from the clicked pixel, staying within color tolerance of the seed. Tolerance
-    // comes from brush size (0-10 -> 0%-100%). Softness only fades pixels that sit at the actual
-    // boundary of the connected region (touching an excluded neighbor or the canvas edge) - an
-    // interior pixel gets full strength regardless of how close its own color is to the tolerance
-    // limit, so a large solid-colored area within tolerance fills solid instead of picking up a
-    // uniform tint from its color distance to the seed.
     private void PerformFill()
     {
         Vector2I seed = (Vector2I)StartingPos;
@@ -360,7 +342,6 @@ public class FillTool: BrushLikeTool
         float softness = Mathf.Clamp(Brush.Softness / 10f, 0f, 1f);
         Color seedColor = BaseImage.GetPixelv(seed);
 
-        // Phase 1: which pixels are connected to the seed within tolerance (hard cutoff).
         HashSet<Vector2I> included = [];
         HashSet<Vector2I> visited = [seed];
         Queue<Vector2I> frontier = new();
@@ -382,8 +363,6 @@ public class FillTool: BrushLikeTool
             }
         }
 
-        // Phase 2: full strength everywhere, except boundary pixels fade based on their own
-        // closeness to the tolerance limit, same falloff shape LineHelper uses for brush softness.
         Dictionary<Vector2I, float> strengths = [];
         foreach(var pixel in included)
         {

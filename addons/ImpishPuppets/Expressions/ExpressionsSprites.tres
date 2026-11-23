@@ -1,0 +1,115 @@
+[gd_resource type="TileSet" script_class="SpriteSet" format=3 uid="uid://cv8xbjjlpav3s"]
+
+[ext_resource type="Material" uid="uid://c5mybhp18dmeu" path="res://addons/ImpishPuppets/Expressions/ExpressionsMaterial.tres" id="1_8yti4"]
+[ext_resource type="Script" uid="uid://do6cul6vaacdd" path="res://addons/SpriteSet/SpriteData.cs" id="1_341i7"]
+[ext_resource type="Script" uid="uid://do0exgujxswtf" path="res://addons/SpriteSet/SpriteSet.cs" id="1_ei4ip"]
+[ext_resource type="Texture2D" uid="uid://crnxybb8cllxn" path="res://addons/ImpishPuppets/Expressions/ExpressionsImage.png" id="2_341i7"]
+
+[sub_resource type="Resource" id="Resource_bs58w"]
+script = ExtResource("1_341i7")
+TileCoord = Vector2i(4, 2)
+TileSize = Vector2i(2, 2)
+Group = &"Expressions"
+Name = &"Anger"
+
+[sub_resource type="Resource" id="Resource_8yti4"]
+script = ExtResource("1_341i7")
+TileSize = Vector2i(2, 2)
+Group = &"Expressions"
+Name = &"Exclaimation"
+
+[sub_resource type="Resource" id="Resource_mx81d"]
+script = ExtResource("1_341i7")
+TileCoord = Vector2i(0, 2)
+TileSize = Vector2i(2, 2)
+Group = &"Expressions"
+Name = &"Grumble"
+
+[sub_resource type="Resource" id="Resource_hknm5"]
+script = ExtResource("1_341i7")
+TileCoord = Vector2i(2, 0)
+TileSize = Vector2i(2, 2)
+Group = &"Expressions"
+Name = &"Question"
+
+[sub_resource type="Resource" id="Resource_iusae"]
+script = ExtResource("1_341i7")
+TileCoord = Vector2i(6, 0)
+TileSize = Vector2i(2, 2)
+Group = &"Expressions"
+Name = &"Shock"
+
+[sub_resource type="Resource" id="Resource_rfufw"]
+script = ExtResource("1_341i7")
+TileCoord = Vector2i(4, 0)
+TileSize = Vector2i(2, 2)
+Group = &"Expressions"
+Name = &"Star"
+
+[sub_resource type="Resource" id="Resource_rrn1g"]
+script = ExtResource("1_341i7")
+TileCoord = Vector2i(2, 2)
+TileSize = Vector2i(2, 2)
+Group = &"Expressions"
+Name = &"Sweat"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8yti4"]
+texture = ExtResource("2_341i7")
+0:0/size_in_atlas = Vector2i(2, 2)
+0:0/0 = 0
+0:0/0/custom_data_0 = &"Expressions"
+0:0/0/custom_data_1 = &"Exclaimation"
+0:0/0/custom_data_2 = Vector2(0, -16)
+2:0/size_in_atlas = Vector2i(2, 2)
+2:0/0 = 0
+2:0/0/custom_data_0 = &"Expressions"
+2:0/0/custom_data_1 = &"Question"
+2:0/0/custom_data_2 = Vector2(0, -16)
+4:0/size_in_atlas = Vector2i(2, 2)
+4:0/0 = 0
+4:0/0/custom_data_0 = &"Expressions"
+4:0/0/custom_data_1 = &"Star"
+6:0/size_in_atlas = Vector2i(2, 2)
+6:0/0 = 0
+6:0/0/custom_data_0 = &"Expressions"
+6:0/0/custom_data_1 = &"Shock"
+0:2/size_in_atlas = Vector2i(2, 2)
+0:2/next_alternative_id = 4
+0:2/0 = 0
+0:2/0/custom_data_0 = &"Expressions"
+0:2/0/custom_data_1 = &"Grumble"
+0:2/0/custom_data_2 = Vector2(0, -16)
+2:2/size_in_atlas = Vector2i(2, 2)
+2:2/0 = 0
+2:2/0/custom_data_0 = &"Expressions"
+2:2/0/custom_data_1 = &"Sweat"
+4:2/size_in_atlas = Vector2i(2, 2)
+4:2/0 = 0
+4:2/0/custom_data_0 = &"Expressions"
+4:2/0/custom_data_1 = &"Anger"
+
+[resource]
+custom_data_layer_0/name = "Group"
+custom_data_layer_0/type = 21
+custom_data_layer_1/name = "Name"
+custom_data_layer_1/type = 21
+custom_data_layer_2/name = "Offset"
+custom_data_layer_2/type = 5
+sources/0 = SubResource("TileSetAtlasSource_8yti4")
+script = ExtResource("1_ei4ip")
+Sprites = Dictionary[StringName, Dictionary]({
+&"Expressions": Dictionary[StringName, ExtResource("1_341i7")]({
+&"Anger": SubResource("Resource_bs58w"),
+&"Exclaimation": SubResource("Resource_8yti4"),
+&"Grumble": SubResource("Resource_mx81d"),
+&"Question": SubResource("Resource_hknm5"),
+&"Shock": SubResource("Resource_iusae"),
+&"Star": SubResource("Resource_rfufw"),
+&"Sweat": SubResource("Resource_rrn1g")
+})
+})
+Textures = Dictionary[int, Texture2D]({
+0: ExtResource("2_341i7")
+})
+DefaultMaterial = ExtResource("1_8yti4")
+metadata/_custom_type_script = "uid://do0exgujxswtf"

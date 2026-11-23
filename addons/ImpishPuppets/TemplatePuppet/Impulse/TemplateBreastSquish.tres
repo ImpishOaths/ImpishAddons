@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ImpulseModule" format=3 uid="uid://vp3mhbitjp64"]
+
+[ext_resource type="Script" uid="uid://qiqnderv4vvk" path="res://addons/ImpishPuppets/PuppetBones/ImpulseModule.cs" id="1_xfx75"]
+
+[resource]
+script = ExtResource("1_xfx75")
+ImpulseStrength = 10.0
+MinMax = Vector2(-0.1, 0.1)
+EdgeBehaviour = 3
+RestoreStrength = 200.0
+Damping = 3.0
+metadata/_custom_type_script = "uid://qiqnderv4vvk"

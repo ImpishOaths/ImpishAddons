@@ -1,0 +1,191 @@
+[gd_scene format=3 uid="uid://pi34iu4o7kn"]
+
+[ext_resource type="Script" uid="uid://bgc18mfso3bid" path="res://addons/BetterRemotes/Remote3DTo2D.cs" id="1_afhd2"]
+[ext_resource type="Shader" uid="uid://bctwsfgn16d3a" path="res://addons/PuppetShader/Puppet3D.gdshader" id="1_dvxne"]
+[ext_resource type="PackedScene" uid="uid://d3ytrccs5iu8m" path="res://addons/ImpishPuppets/TemplatePuppet/Template2D.tscn" id="1_lifyd"]
+[ext_resource type="Texture2D" uid="uid://bf4pud1eykx1h" path="res://addons/ImpishPuppets/TemplatePuppet/TemplateGradient.tres" id="2_kyb0x"]
+[ext_resource type="PackedScene" uid="uid://cbr7bgw8tc2ja" path="res://addons/ImpishPuppets/PuppetSkeleton/PuppetSkeleton2D.tscn" id="4_d8jt2"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_1k54v"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kyb0x"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("1_dvxne")
+shader_parameter/ViewportTex = SubResource("ViewportTexture_1k54v")
+shader_parameter/RegionSize = Vector2(0.333, 1)
+shader_parameter/EdgeEpsilon = Vector2(0.001, 0.001)
+shader_parameter/FadeColor = Color(0, 0, 0, 0)
+shader_parameter/FadeEdge = 0.0
+shader_parameter/Gradient = ExtResource("2_kyb0x")
+shader_parameter/DepthColor = Color(1, 1, 1, 0)
+shader_parameter/DepthLayerCount = 2
+
+[sub_resource type="QuadMesh" id="QuadMesh_lgft2"]
+size = Vector2(2, 2)
+center_offset = Vector3(0, 1, 0)
+
+[node name="Template" type="Node3D" unique_id=70513091]
+
+[node name="EyeTarget" type="Node3D" parent="." unique_id=76059979 node_paths=PackedStringArray("Target", "PlaneNode")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0436487, 1.0847034, 0.039863348)
+script = ExtResource("1_afhd2")
+Target = NodePath("../SubViewport/PuppetSkeleton2D/Root/EyeTarget")
+PlaneNode = NodePath("../Meshes")
+RemoteScale = Vector2(64, 64)
+RemoteOffset = Vector2(64, 128)
+metadata/_custom_type_script = "uid://bgc18mfso3bid"
+
+[node name="Meshes" type="Node3D" parent="." unique_id=1167722778]
+
+[node name="Back" type="MeshInstance3D" parent="Meshes" unique_id=713399702]
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 0, 0, -0.03)
+material_override = SubResource("ShaderMaterial_kyb0x")
+instance_shader_parameters/Depth = 0.03
+instance_shader_parameters/Layer = 1
+mesh = SubResource("QuadMesh_lgft2")
+
+[node name="Body" type="MeshInstance3D" parent="Meshes" unique_id=1993035752]
+material_override = SubResource("ShaderMaterial_kyb0x")
+instance_shader_parameters/Depth = 0.03
+instance_shader_parameters/Layer = 0
+mesh = SubResource("QuadMesh_lgft2")
+
+[node name="Front" type="MeshInstance3D" parent="Meshes" unique_id=126138886]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.03)
+material_override = SubResource("ShaderMaterial_kyb0x")
+instance_shader_parameters/Depth = 0.03
+instance_shader_parameters/Layer = 2
+mesh = SubResource("QuadMesh_lgft2")
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=1979057370]
+disable_3d = true
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1536, 512)
+size_2d_override = Vector2i(384, 128)
+size_2d_override_stretch = true
+
+[node name="Template2D" parent="SubViewport" unique_id=1543695730 instance=ExtResource("1_lifyd")]
+
+[node name="PuppetSkeleton2D" parent="SubViewport" unique_id=946717836 node_paths=PackedStringArray("TargetPuppet") instance=ExtResource("4_d8jt2")]
+TargetPuppet = NodePath("../Template2D")
+
+[node name="ClothingAnimators" parent="SubViewport/PuppetSkeleton2D" index="1" unique_id=622904187 node_paths=PackedStringArray("Animators")]
+Animators = {
+&"Arm": NodePath("../../Template2D/ArmClothes"),
+&"Head": NodePath("../../Template2D/HeadClothes"),
+&"Leg": NodePath("../../Template2D/LegClothes"),
+&"Lower": NodePath("../../Template2D/LowerClothes"),
+&"Upper": NodePath("../../Template2D/UpperClothes")
+}
+Head = &"Head/Femme"
+Upper = &"Upper/Femme"
+Arm = &"Arm/Femme"
+Lower = &"Lower/Femme"
+Leg = &"Leg/Femme"
+
+[node name="ExtraAnimators" parent="SubViewport/PuppetSkeleton2D" index="2" unique_id=680831538 node_paths=PackedStringArray("Animators")]
+Animators = {
+&"Expression": NodePath("../../Template2D/ExpressionAnimator"),
+&"OrderFlip": NodePath("../../Template2D/OrderFlipAnimator")
+}
+OrderFlip = &""
+Expression = &""
+
+[node name="LegAnimators" parent="SubViewport/PuppetSkeleton2D" index="3" unique_id=561406818 node_paths=PackedStringArray("Animators")]
+Animators = {
+&"LegL": NodePath("../../Template2D/LegLAnimator"),
+&"LegR": NodePath("../../Template2D/LegRAnimator")
+}
+LegL = &""
+LegR = &""
+
+[node name="ArmRAnimators" parent="SubViewport/PuppetSkeleton2D" index="4" unique_id=202122911 node_paths=PackedStringArray("Animators")]
+Animators = {
+&"Arm": NodePath("../../Template2D/ArmRAnimator"),
+&"Hand": NodePath("../../Template2D/HandRAnimator"),
+&"Palm": NodePath("../../Template2D/PalmRAnimator")
+}
+Arm = &""
+Palm = &""
+Hand = &""
+
+[node name="ArmLAnimators" parent="SubViewport/PuppetSkeleton2D" index="5" unique_id=509872110 node_paths=PackedStringArray("Animators")]
+Animators = {
+&"Arm": NodePath("../../Template2D/ArmLAnimator"),
+&"Hand": NodePath("../../Template2D/HandLAnimator"),
+&"Palm": NodePath("../../Template2D/PalmLAnimator")
+}
+Arm = &""
+Palm = &""
+Hand = &""
+
+[node name="HeadAnimators" parent="SubViewport/PuppetSkeleton2D" index="6" unique_id=1643881862 node_paths=PackedStringArray("Animators")]
+Animators = {
+&"EyeL": NodePath("../../Template2D/EyeLAnimator"),
+&"EyeR": NodePath("../../Template2D/EyeRAnimator"),
+&"EyebrowL": NodePath("../../Template2D/EyebrowLAnimator"),
+&"EyebrowR": NodePath("../../Template2D/EyebrowRAnimator"),
+&"Mouth": NodePath("../../Template2D/MouthAnimator")
+}
+EyebrowR = &""
+EyebrowL = &""
+EyeR = &""
+EyeL = &""
+Mouth = &""
+
+[node name="EyeTarget" parent="SubViewport/PuppetSkeleton2D/Root" parent_id_path=PackedInt32Array(946717836, 1498595902) index="0" unique_id=1002044189 node_paths=PackedStringArray("Target")]
+position = Vector2(66.79352, -69.42102)
+Target = NodePath("../../../Template2D/Sprites/Head/EyeTargetR")
+
+[node name="LowerBase" parent="SubViewport/PuppetSkeleton2D/Root" parent_id_path=PackedInt32Array(946717836, 1498595902) index="1" unique_id=2111938519]
+position = Vector2(0, -33.555)
+
+[node name="LowerBody" parent="SubViewport/PuppetSkeleton2D/Root/LowerBase" index="0" unique_id=1492690191 node_paths=PackedStringArray("Target")]
+Target = NodePath("../../../../Template2D/Sprites/LowerBody")
+
+[node name="LegR" parent="SubViewport/PuppetSkeleton2D/Root/LowerBase/LowerBody" index="0" unique_id=1507194307 node_paths=PackedStringArray("Target")]
+position = Vector2(7.745, -4.555)
+Target = NodePath("../../../../../Template2D/Sprites/LayerLegR/Leg")
+
+[node name="LegL" parent="SubViewport/PuppetSkeleton2D/Root/LowerBase/LowerBody" index="1" unique_id=414652643 node_paths=PackedStringArray("Target")]
+position = Vector2(-6.76, -4.555)
+Target = NodePath("../../../../../Template2D/Sprites/LayerLegL/Leg")
+
+[node name="UpperBody" parent="SubViewport/PuppetSkeleton2D/Root/LowerBase/LowerBody" index="2" unique_id=529599282 node_paths=PackedStringArray("Target")]
+position = Vector2(0, -17.4)
+Target = NodePath("../../../../../Template2D/Sprites/UpperBody")
+
+[node name="ArmR" parent="SubViewport/PuppetSkeleton2D/Root/LowerBase/LowerBody/UpperBody" index="0" unique_id=470131072 node_paths=PackedStringArray("Target")]
+position = Vector2(10.675, -14.19)
+Target = NodePath("../../../../../../Template2D/Sprites/LayerArmR/Arm")
+
+[node name="HandR" parent="SubViewport/PuppetSkeleton2D/Root/LowerBase/LowerBody/UpperBody/ArmR" index="0" unique_id=1875259417 node_paths=PackedStringArray("Target")]
+Target = NodePath("../../../../../../../Template2D/Sprites/LayerArmR/Hand")
+
+[node name="ArmL" parent="SubViewport/PuppetSkeleton2D/Root/LowerBase/LowerBody/UpperBody" index="1" unique_id=473800043 node_paths=PackedStringArray("Target")]
+position = Vector2(-9.78, -14.19)
+Target = NodePath("../../../../../../Template2D/Sprites/LayerArmL/Arm")
+
+[node name="HandL" parent="SubViewport/PuppetSkeleton2D/Root/LowerBase/LowerBody/UpperBody/ArmL" index="0" unique_id=797255488 node_paths=PackedStringArray("Target")]
+Target = NodePath("../../../../../../../Template2D/Sprites/LayerArmL/Hand")
+
+[node name="Head" parent="SubViewport/PuppetSkeleton2D/Root/LowerBase/LowerBody/UpperBody" index="2" unique_id=1026522763 node_paths=PackedStringArray("Target")]
+position = Vector2(0, -18.13)
+Target = NodePath("../../../../../../Template2D/Sprites/Head")
+
+[node name="FloorR" parent="SubViewport/PuppetSkeleton2D/Root" parent_id_path=PackedInt32Array(946717836, 1498595902) index="2" unique_id=645478322]
+position = Vector2(7.745, 0)
+
+[node name="FootR" parent="SubViewport/PuppetSkeleton2D/Root/FloorR" index="0" unique_id=1769083526 node_paths=PackedStringArray("Target")]
+Target = NodePath("../../../../Template2D/Sprites/LayerLegR/Foot")
+
+[node name="FloorL" parent="SubViewport/PuppetSkeleton2D/Root" parent_id_path=PackedInt32Array(946717836, 1498595902) index="3" unique_id=892736827]
+position = Vector2(-6.76, 0)
+
+[node name="FootL" parent="SubViewport/PuppetSkeleton2D/Root/FloorL" index="0" unique_id=2024748919 node_paths=PackedStringArray("Target")]
+Target = NodePath("../../../../Template2D/Sprites/LayerLegL/Foot")
+
+[editable path="SubViewport/PuppetSkeleton2D"]

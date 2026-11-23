@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://qlag35pfmry2"]
+
+[ext_resource type="Script" uid="uid://cupyrgeeka47j" path="res://addons/ImageBaker/ImageBaker.cs" id="1_saofm"]
+[ext_resource type="Script" uid="uid://cfo1fspbdmee" path="res://addons/ImageBaker/NormalBake.cs" id="2_ha3nk"]
+[ext_resource type="Script" uid="uid://brkdtntlqcsuq" path="res://addons/ImageBaker/PuppetShaderBake.cs" id="5_6sg6i"]
+[ext_resource type="Script" uid="uid://5ovwqj7pwi5h" path="res://addons/ImageBaker/SmoothingBake.cs" id="6_ngyof"]
+
+[sub_resource type="Resource" id="Resource_sg066"]
+script = ExtResource("2_ha3nk")
+metadata/_custom_type_script = "uid://cfo1fspbdmee"
+
+[sub_resource type="Resource" id="Resource_417dy"]
+script = ExtResource("5_6sg6i")
+metadata/_custom_type_script = "uid://brkdtntlqcsuq"
+
+[sub_resource type="Resource" id="Resource_kaldy"]
+script = ExtResource("6_ngyof")
+metadata/_custom_type_script = "uid://5ovwqj7pwi5h"
+
+[node name="ImageBakers" type="Node" unique_id=1175886546]
+
+[node name="NormalBaker" type="Node" parent="." unique_id=651966457]
+script = ExtResource("1_saofm")
+Converter = SubResource("Resource_sg066")
+metadata/_custom_type_script = "uid://cupyrgeeka47j"
+
+[node name="PuppetBaker" type="Node" parent="." unique_id=2114227289]
+script = ExtResource("1_saofm")
+Converter = SubResource("Resource_417dy")
+metadata/_custom_type_script = "uid://cupyrgeeka47j"
+
+[node name="SmoothingBaker" type="Node" parent="." unique_id=1550062170]
+script = ExtResource("1_saofm")
+Converter = SubResource("Resource_kaldy")
+metadata/_custom_type_script = "uid://cupyrgeeka47j"

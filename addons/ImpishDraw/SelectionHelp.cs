@@ -275,8 +275,6 @@ public class MoveTool(Vector2[] selectionRegion, Image cutoutImage, Image select
     public Image CutoutImage = cutoutImage;
     public Image DrawingImage = new();
     private Vector2 SelectionCenter;
-    // Grows across Begin/Step to track the actual bounding box the selection has occupied during
-    // this drag, so the committed undo region can be cropped to that instead of the whole sprite.
     private Rect2I DirtyRegion;
 
     public Transform2D InitialTransform = initialTransform ?? Transform2D.Identity;
@@ -342,13 +340,6 @@ public class MoveTool(Vector2[] selectionRegion, Image cutoutImage, Image select
     {
         _Began = false;
         AddToDrawing();
-        // Undo only needs to cover the area the selection actually swept through this drag, not
-        // the whole sprite. Grow by a couple pixels first: TransformImage samples bilinearly, so
-        // the transformed selection can bleed slightly past its exact polygon bounds at both the
-        // destination and the cutout edge left behind - without this margin that bleed falls
-        // outside the committed region and shows up as thin leftover streaks. Fall back to the
-        // full region in the degenerate case where a chained drag left the selection entirely
-        // off-canvas, so downstream image ops never see a zero-area rect.
         Rect2I committedRegion = DirtyRegion.Grow(2).Intersection(Region);
         if(! committedRegion.HasArea())
             committedRegion = Region;

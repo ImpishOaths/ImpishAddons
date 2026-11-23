@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://brxqhgehdcu2a"]
+
+[ext_resource type="Script" uid="uid://ueevuybedu1d" path="res://addons/ImpishPuppets/Scripts/CharacterData.cs" id="1_6hqi2"]
+
+[resource]
+script = ExtResource("1_6hqi2")
+Name = "Template"
+LowerHeight = 33.555
+LegHeight = 4.555
+LegWidths = Vector2(6.76, 7.745)
+UpperHeight = 17.4
+ArmsHeight = 14.19
+ArmsWidths = Vector2(9.78, 10.675)
+HeadHeight = 18.13
+metadata/_custom_type_script = "uid://ueevuybedu1d"

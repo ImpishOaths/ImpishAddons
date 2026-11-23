@@ -1,0 +1,114 @@
+[gd_resource type="AnimationLibrary" format=3 uid="uid://b76qbsp40jv0s"]
+
+[ext_resource type="TileSet" uid="uid://br8t3hfw4vamk" path="res://addons/ImpishPuppets/Clothes/Femme/FemmeClothesSprites.tres" id="1_n51ur"]
+[ext_resource type="TileSet" uid="uid://csq6q8dkjypkm" path="res://addons/ImpishPuppets/Clothes/None/NoneClothesSprites.tres" id="2_s84yl"]
+
+[sub_resource type="Animation" id="Animation_n51ur"]
+resource_name = "Femme"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LowerBody/ClothesLower:SpriteSet")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_n51ur")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LowerBody/ClothesLower/ClothesLowerBack:SpriteSet")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_n51ur")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LayerLegL/Leg/UpperLeg/ClothesLeg:SpriteSet")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_n51ur")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LayerLegR/Leg/UpperLeg/ClothesLeg:SpriteSet")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_n51ur")]
+}
+
+[sub_resource type="Animation" id="Animation_rhqgc"]
+resource_name = "None"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LowerBody/ClothesLower:SpriteSet")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_s84yl")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LowerBody/ClothesLower/ClothesLowerBack:SpriteSet")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_s84yl")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LayerLegL/Leg/UpperLeg/ClothesLeg:SpriteSet")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_s84yl")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LayerLegR/Leg/UpperLeg/ClothesLeg:SpriteSet")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_s84yl")]
+}
+
+[resource]
+_data = {
+&"Femme": SubResource("Animation_n51ur"),
+&"None": SubResource("Animation_rhqgc")
+}

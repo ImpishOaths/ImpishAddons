@@ -1,0 +1,171 @@
+[gd_resource type="TileSet" script_class="SpriteSet" format=3 uid="uid://b7eg80dp7vt4v"]
+
+[ext_resource type="Material" uid="uid://bua1hphv6xpa4" path="res://addons/ImpishPuppets/Clothes/Shared/ClothingMaterial.tres" id="1_tsifn"]
+[ext_resource type="Script" uid="uid://do6cul6vaacdd" path="res://addons/SpriteSet/SpriteData.cs" id="2_s4oix"]
+[ext_resource type="Texture2D" uid="uid://bm3jk254l1aj2" path="res://addons/ImpishPuppets/Clothes/Warrior/WarriorClothesImage.png" id="3_st45r"]
+[ext_resource type="Script" uid="uid://do0exgujxswtf" path="res://addons/SpriteSet/SpriteSet.cs" id="4_pep6k"]
+
+[sub_resource type="Resource" id="Resource_b6n6q"]
+script = ExtResource("2_s4oix")
+TileSize = Vector2i(2, 2)
+Group = &"Upper"
+Name = &"Upper"
+
+[sub_resource type="Resource" id="Resource_5imdc"]
+script = ExtResource("2_s4oix")
+TileSize = Vector2i(2, 2)
+AlternateIndex = 1
+Group = &"Upper"
+Name = &"UpperBack"
+
+[sub_resource type="Resource" id="Resource_3iex7"]
+script = ExtResource("2_s4oix")
+TileCoord = Vector2i(3, 0)
+TileSize = Vector2i(2, 2)
+Group = &"Upper"
+Name = &"Arm"
+
+[sub_resource type="Resource" id="Resource_5ipy0"]
+script = ExtResource("2_s4oix")
+TileCoord = Vector2i(5, 0)
+TileSize = Vector2i(2, 2)
+Group = &"Upper"
+Name = &"Breast"
+
+[sub_resource type="Resource" id="Resource_4stmd"]
+script = ExtResource("2_s4oix")
+TileCoord = Vector2i(0, 3)
+TileSize = Vector2i(3, 3)
+Group = &"Lower"
+Name = &"Lower"
+
+[sub_resource type="Resource" id="Resource_twdvt"]
+script = ExtResource("2_s4oix")
+TileCoord = Vector2i(0, 3)
+TileSize = Vector2i(3, 3)
+AlternateIndex = 1
+Group = &"Lower"
+Name = &"LowerBack"
+
+[sub_resource type="Resource" id="Resource_yd66w"]
+script = ExtResource("2_s4oix")
+TileCoord = Vector2i(3, 3)
+TileSize = Vector2i(2, 2)
+Group = &"Lower"
+Name = &"Leg"
+
+[sub_resource type="Resource" id="Resource_rjjko"]
+script = ExtResource("2_s4oix")
+TileCoord = Vector2i(0, 6)
+TileSize = Vector2i(2, 2)
+Group = &"Feet"
+Name = &"Feet"
+
+[sub_resource type="Resource" id="Resource_334ma"]
+script = ExtResource("2_s4oix")
+TileCoord = Vector2i(2, 6)
+TileSize = Vector2i(2, 2)
+Group = &"Feet"
+Name = &"Leg"
+
+[sub_resource type="Resource" id="Resource_1hmy0"]
+script = ExtResource("2_s4oix")
+TileCoord = Vector2i(5, 2)
+TileSize = Vector2i(2, 2)
+Group = &"Arm"
+Name = &"Wrist"
+
+[sub_resource type="Resource" id="Resource_rqwyo"]
+script = ExtResource("2_s4oix")
+TileCoord = Vector2i(5, 5)
+TileSize = Vector2i(3, 3)
+Group = &"Head"
+Name = &"Head"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1bffb"]
+texture = ExtResource("3_st45r")
+0:0/size_in_atlas = Vector2i(2, 2)
+0:0/next_alternative_id = 2
+0:0/0 = 0
+0:0/0/custom_data_0 = &"Upper"
+0:0/0/custom_data_1 = &"Upper"
+0:0/0/custom_data_2 = Vector2(0, 2.91)
+0:0/1 = 1
+0:0/1/custom_data_0 = &"Upper"
+0:0/1/custom_data_1 = &"UpperBack"
+0:3/size_in_atlas = Vector2i(3, 3)
+0:3/next_alternative_id = 2
+0:3/0 = 0
+0:3/0/custom_data_0 = &"Lower"
+0:3/0/custom_data_1 = &"Lower"
+0:3/1 = 1
+0:3/1/custom_data_0 = &"Lower"
+0:3/1/custom_data_1 = &"LowerBack"
+3:0/size_in_atlas = Vector2i(2, 2)
+3:0/0 = 0
+3:0/0/custom_data_0 = &"Upper"
+3:0/0/custom_data_1 = &"Arm"
+3:3/size_in_atlas = Vector2i(2, 2)
+3:3/0 = 0
+3:3/0/custom_data_0 = &"Lower"
+3:3/0/custom_data_1 = &"Leg"
+5:5/size_in_atlas = Vector2i(3, 3)
+5:5/next_alternative_id = 2
+5:5/0 = 0
+5:5/0/custom_data_0 = &"Head"
+5:5/0/custom_data_1 = &"Head"
+5:0/size_in_atlas = Vector2i(2, 2)
+5:0/0 = 0
+5:0/0/custom_data_0 = &"Upper"
+5:0/0/custom_data_1 = &"Breast"
+0:6/size_in_atlas = Vector2i(2, 2)
+0:6/0 = 0
+0:6/0/custom_data_0 = &"Feet"
+0:6/0/custom_data_1 = &"Feet"
+0:6/0/custom_data_2 = Vector2(3.470543, -10.546814)
+5:2/size_in_atlas = Vector2i(2, 2)
+5:2/0 = 0
+5:2/0/custom_data_0 = &"Arm"
+5:2/0/custom_data_1 = &"Wrist"
+2:6/size_in_atlas = Vector2i(2, 2)
+2:6/0 = 0
+2:6/0/custom_data_0 = &"Feet"
+2:6/0/custom_data_1 = &"Leg"
+
+[resource]
+custom_data_layer_0/name = "Group"
+custom_data_layer_0/type = 21
+custom_data_layer_1/name = "Name"
+custom_data_layer_1/type = 21
+custom_data_layer_2/name = "Offset"
+custom_data_layer_2/type = 5
+sources/0 = SubResource("TileSetAtlasSource_1bffb")
+script = ExtResource("4_pep6k")
+Sprites = Dictionary[StringName, Dictionary]({
+&"Arm": Dictionary[StringName, ExtResource("2_s4oix")]({
+&"Wrist": SubResource("Resource_1hmy0")
+}),
+&"Feet": Dictionary[StringName, ExtResource("2_s4oix")]({
+&"Feet": SubResource("Resource_rjjko"),
+&"Leg": SubResource("Resource_334ma")
+}),
+&"Head": Dictionary[StringName, ExtResource("2_s4oix")]({
+&"Head": SubResource("Resource_rqwyo")
+}),
+&"Lower": Dictionary[StringName, ExtResource("2_s4oix")]({
+&"Leg": SubResource("Resource_yd66w"),
+&"Lower": SubResource("Resource_4stmd"),
+&"LowerBack": SubResource("Resource_twdvt")
+}),
+&"Upper": Dictionary[StringName, ExtResource("2_s4oix")]({
+&"Arm": SubResource("Resource_3iex7"),
+&"Breast": SubResource("Resource_5ipy0"),
+&"Upper": SubResource("Resource_b6n6q"),
+&"UpperBack": SubResource("Resource_5imdc")
+})
+})
+Textures = Dictionary[int, Texture2D]({
+0: ExtResource("3_st45r")
+})
+DefaultMaterial = ExtResource("1_tsifn")
+metadata/_custom_type_script = "uid://do0exgujxswtf"

@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cratkwfoea4h1"]
+
+[ext_resource type="Shader" uid="uid://bctwsfgn16d3a" path="res://addons/PuppetShader/Puppet3D.gdshader" id="1_8ifmh"]
+[ext_resource type="Texture2D" uid="uid://p2l3pndhwtqs" path="res://addons/PuppetShader/TestTextureImage.png" id="2_t45mj"]
+
+[resource]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("1_8ifmh")
+shader_parameter/RegionSize = Vector2(0.333, 1)
+shader_parameter/FadeColor = Color(0, 0, 0, 0)
+shader_parameter/FadeEdge = 0.0
+shader_parameter/Gradient = ExtResource("2_t45mj")
+shader_parameter/DepthColor = Color(0, 0, 0, 0)
+shader_parameter/DepthLayerCount = 2

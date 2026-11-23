@@ -1,0 +1,90 @@
+[gd_resource type="AnimationLibrary" format=3 uid="uid://do8o682uke8vm"]
+
+[sub_resource type="Animation" id="Animation_ln4wn"]
+resource_name = "ArchDown"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Eye/EyeBrow:SpriteName")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"ArchDown"]
+}
+
+[sub_resource type="Animation" id="Animation_4q288"]
+resource_name = "ArchUp"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Eye/EyeBrow:SpriteName")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"ArchUp"]
+}
+
+[sub_resource type="Animation" id="Animation_w5x06"]
+resource_name = "Flat"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Eye/EyeBrow:SpriteName")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Flat"]
+}
+
+[sub_resource type="Animation" id="Animation_y7a8d"]
+resource_name = "SlantDown"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Eye/EyeBrow:SpriteName")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"SlantDown"]
+}
+
+[sub_resource type="Animation" id="Animation_7r4pq"]
+resource_name = "SlantUp"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Eye/EyeBrow:SpriteName")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"SlantUp"]
+}
+
+[resource]
+_data = {
+&"ArchDown": SubResource("Animation_ln4wn"),
+&"ArchUp": SubResource("Animation_4q288"),
+&"Flat": SubResource("Animation_w5x06"),
+&"SlantDown": SubResource("Animation_y7a8d"),
+&"SlantUp": SubResource("Animation_7r4pq")
+}

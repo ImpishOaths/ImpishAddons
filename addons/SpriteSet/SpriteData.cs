@@ -1,5 +1,7 @@
 using Godot;
 
+namespace SpriteSet;
+
 [Tool]
 [GlobalClass]
 public partial class SpriteData : Resource

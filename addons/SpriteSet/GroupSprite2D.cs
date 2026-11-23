@@ -6,12 +6,32 @@ namespace SpriteSet;
 [Tool]
 [GlobalClass]
 [Icon("res://addons/SpriteSet/GroupSprite.png")]
-public partial class GroupSprite2D: Sprite2D
+public partial class GroupSprite2D: Sprite2D, ISerializationListener
 {
     public GroupSprite2D()
     {
         RegionEnabled = true;
         RegionFilterClipEnabled = true;
+        ItemRectChanged += RectChanged;
+    }
+
+    private Vector2 PreviousOffset;
+    private void RectChanged()
+    {
+        if(Offset == PreviousOffset)
+            return;
+        if(SpriteSet == null)
+            return;
+        PreviousOffset = Offset;
+        SpriteSet.UpdateSpriteOffset(SpriteGroup, SpriteName, Offset);
+    }
+
+    private void UpdateOffset(StringName group, StringName name, Vector2 offset)
+    {
+        if(! (group == SpriteGroup && name == SpriteName))
+            return;
+        PreviousOffset = offset;
+        Offset = offset;
     }
 
     public StringName SpriteGroup
@@ -51,12 +71,15 @@ public partial class GroupSprite2D: Sprite2D
         {
             if(_SpriteSet == value)
                 return;
+            if(_SpriteSet != null)
+                _SpriteSet.OnUpdateSpriteOffset -= UpdateOffset;
             _SpriteSet = value;
             if(_SpriteSet == null || ! _SpriteSet.TryGetSprite(_SpriteGroup, _SpriteName, out _))
             {
                 _SpriteGroup = GetFirstGroup();
                 _SpriteName = GetFirstSpriteInGroup();
             }
+            _SpriteSet.OnUpdateSpriteOffset += UpdateOffset;
             DeferredTryUpdateSprite();
             NotifyPropertyListChanged();
         }
@@ -158,11 +181,20 @@ public partial class GroupSprite2D: Sprite2D
         return true;
     }
 
+    private void SetSpriteOffset(Vector2 offset)
+    {
+        PreviousOffset = offset;
+        Offset = PreviousOffset;
+    }
+
     private void UpdateSprite(SpriteData spriteData)
     {
+        TileData tileData = SpriteSet.GetData(spriteData);
+        PreviousOffset = tileData.GetCustomData("Offset").As<Vector2>();
+        Offset = PreviousOffset;
+
         Texture = SpriteSet.GetTexture(spriteData.TextureIndex);
         RegionRect = new(spriteData.TileCoord * SpriteSet.TileSize, spriteData.TileSize * SpriteSet.TileSize);
-        TileData tileData = SpriteSet.GetData(spriteData);
 
         if(tileData.Material != null)
             Material = tileData.Material;
@@ -171,10 +203,6 @@ public partial class GroupSprite2D: Sprite2D
 
         FlipH = tileData.FlipH;
         FlipV = tileData.FlipV;
-        Offset = tileData.GetCustomData("Offset").As<Vector2>();
-#if TOOLS
-        PreviousOffset = Offset;
-#endif
 
         NotifyPropertyListChanged();
     }
@@ -186,40 +214,14 @@ public partial class GroupSprite2D: Sprite2D
         Material = null;
     }
 
-#if TOOLS
-    private Vector2 PreviousOffset;
-    private bool SetDirty = false;
-    public override void _Process(double delta)
+    public void OnBeforeSerialize()
     {
-        if(SpriteSet == null || _SpriteGroup.IsEmpty || _SpriteName.IsEmpty)
-            return;
-        
-        if(SetDirty)
-        {
-            SpriteSet.ResetDirty(_SpriteGroup, _SpriteName);
-            SetDirty = false;
-            return;
-        }
-
-        if(SpriteSet.IsDirty(_SpriteGroup, _SpriteName))
-        {
-            Vector2? offset = SpriteSet.GetOffset(_SpriteGroup, _SpriteName);
-            if(offset != null)
-            {
-                Offset = offset.Value;
-                PreviousOffset = Offset;
-            }
-            //TryUpdateSprite();
-        }
-        else if(Offset != PreviousOffset)
-        {
-            //Vector2 diff = PreviousOffset - Offset;
-            //Position += diff;
-            SpriteSet.SetOffset(_SpriteGroup, _SpriteName, Offset);
-            PreviousOffset = Offset;
-            SetDirty = true;
-            //TryUpdateSprite();
-        }
+        if(_SpriteSet != null)
+            _SpriteSet.OnUpdateSpriteOffset -= UpdateOffset;
     }
-#endif
+
+    public void OnAfterDeserialize()
+    {
+        PreviousOffset = Offset;
+    }
 }

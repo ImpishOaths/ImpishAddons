@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bvpicncfya724"]
+
+[ext_resource type="Shader" uid="uid://b11whg22imtg1" path="res://addons/PuppetShader/Puppet2D.gdshader" id="1_833h1"]
+[ext_resource type="Texture2D" uid="uid://bf4pud1eykx1h" path="res://addons/ImpishPuppets/TemplatePuppet/TemplateGradient.tres" id="2_vea1t"]
+
+[resource]
+shader = ExtResource("1_833h1")
+shader_parameter/Gradient = ExtResource("2_vea1t")
+shader_parameter/RegionSize = Vector2(128, 128)

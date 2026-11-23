@@ -1,0 +1,269 @@
+[gd_scene format=3 uid="uid://cbr7bgw8tc2ja"]
+
+[ext_resource type="Script" uid="uid://1vk347rh33gu" path="res://addons/ImpishPuppets/PuppetSkeleton/PuppetSkeleton.cs" id="1_q2bmk"]
+[ext_resource type="Resource" uid="uid://brxqhgehdcu2a" path="res://addons/ImpishPuppets/TemplatePuppet/TemplateCharacter.tres" id="2_rvf5u"]
+[ext_resource type="Script" uid="uid://cavu3fnrp5fs1" path="res://addons/BetterRemotes/Remote2D.cs" id="3_dbbxh"]
+[ext_resource type="AnimationLibrary" uid="uid://dk1mrhhreb5b" path="res://addons/ImpishPuppets/Animations/BodyAnimations.tres" id="4_dbbxh"]
+[ext_resource type="Script" uid="uid://cd64fqd7f1rou" path="res://addons/BetterRemotes/RemoteAnimator.cs" id="5_ofbib"]
+
+[sub_resource type="Animation" id="Animation_dbbxh"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Root/FloorR/FootR:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Root/FloorR/FootR:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Root/LowerBase/LowerBody/UpperBody/ArmR/HandR:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(22.099, -0.896)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Root/LowerBase/LowerBody/UpperBody/ArmR/HandR:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.538529]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Root/LowerBase/LowerBody/UpperBody/ArmL/HandL:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-25.833725, -0.11510849)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Root/LowerBase/LowerBody/UpperBody/ArmL/HandL:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.5162116]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Root/FloorL/FootL:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Root/FloorL/FootL:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Root/LowerBase/LowerBody:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Root/LowerBase/LowerBody:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Root/LowerBase/LowerBody/UpperBody:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Root/LowerBase/LowerBody/UpperBody/Head:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ofbib"]
+_data = {
+&"RESET": SubResource("Animation_dbbxh")
+}
+
+[node name="PuppetSkeleton2D" type="Node2D" unique_id=946717836]
+script = ExtResource("1_q2bmk")
+Character = ExtResource("2_rvf5u")
+
+[node name="BodyAnimations" type="AnimationPlayer" parent="." unique_id=1446749041]
+libraries/ = SubResource("AnimationLibrary_ofbib")
+libraries/BodyAnimations = ExtResource("4_dbbxh")
+
+[node name="ClothingAnimators" type="Node" parent="." unique_id=622904187 node_paths=PackedStringArray("Animators")]
+script = ExtResource("5_ofbib")
+Animators = {}
+metadata/_custom_type_script = "uid://cd64fqd7f1rou"
+
+[node name="ExtraAnimators" type="Node" parent="." unique_id=680831538 node_paths=PackedStringArray("Animators")]
+script = ExtResource("5_ofbib")
+Animators = {}
+metadata/_custom_type_script = "uid://cd64fqd7f1rou"
+
+[node name="LegAnimators" type="Node" parent="." unique_id=561406818 node_paths=PackedStringArray("Animators")]
+script = ExtResource("5_ofbib")
+Animators = {}
+metadata/_custom_type_script = "uid://cd64fqd7f1rou"
+
+[node name="ArmRAnimators" type="Node" parent="." unique_id=202122911 node_paths=PackedStringArray("Animators")]
+script = ExtResource("5_ofbib")
+Animators = {}
+metadata/_custom_type_script = "uid://cd64fqd7f1rou"
+
+[node name="ArmLAnimators" type="Node" parent="." unique_id=509872110 node_paths=PackedStringArray("Animators")]
+script = ExtResource("5_ofbib")
+Animators = {}
+metadata/_custom_type_script = "uid://cd64fqd7f1rou"
+
+[node name="HeadAnimators" type="Node" parent="." unique_id=1643881862 node_paths=PackedStringArray("Animators")]
+script = ExtResource("5_ofbib")
+Animators = {}
+metadata/_custom_type_script = "uid://cd64fqd7f1rou"
+
+[node name="Root" type="Node2D" parent="." unique_id=1498595902]
+position = Vector2(64, 128)
+
+[node name="EyeTarget" type="Node2D" parent="Root" unique_id=1002044189]
+script = ExtResource("3_dbbxh")
+metadata/_custom_type_script = "uid://cavu3fnrp5fs1"
+
+[node name="LowerBase" type="Node2D" parent="Root" unique_id=2111938519]
+position = Vector2(0, -13.255)
+
+[node name="LowerBody" type="Node2D" parent="Root/LowerBase" unique_id=1492690191]
+script = ExtResource("3_dbbxh")
+metadata/_custom_type_script = "uid://cavu3fnrp5fs1"
+
+[node name="LegR" type="Node2D" parent="Root/LowerBase/LowerBody" unique_id=1507194307]
+position = Vector2(7.6949997, -2.699997)
+script = ExtResource("3_dbbxh")
+metadata/_custom_type_script = "uid://cavu3fnrp5fs1"
+
+[node name="LegL" type="Node2D" parent="Root/LowerBase/LowerBody" unique_id=414652643]
+position = Vector2(-7.7649994, -2.699997)
+script = ExtResource("3_dbbxh")
+metadata/_custom_type_script = "uid://cavu3fnrp5fs1"
+
+[node name="UpperBody" type="Node2D" parent="Root/LowerBase/LowerBody" unique_id=529599282]
+position = Vector2(0, -15.415001)
+script = ExtResource("3_dbbxh")
+metadata/_custom_type_script = "uid://cavu3fnrp5fs1"
+
+[node name="ArmR" type="Node2D" parent="Root/LowerBase/LowerBody/UpperBody" unique_id=470131072]
+position = Vector2(7.515, -13.075)
+script = ExtResource("3_dbbxh")
+metadata/_custom_type_script = "uid://cavu3fnrp5fs1"
+
+[node name="HandR" type="Node2D" parent="Root/LowerBase/LowerBody/UpperBody/ArmR" unique_id=1875259417]
+position = Vector2(22.099, -0.896)
+rotation = 1.538529
+script = ExtResource("3_dbbxh")
+metadata/_custom_type_script = "uid://cavu3fnrp5fs1"
+
+[node name="ArmL" type="Node2D" parent="Root/LowerBase/LowerBody/UpperBody" unique_id=473800043]
+position = Vector2(-9.305, -13.075)
+script = ExtResource("3_dbbxh")
+metadata/_custom_type_script = "uid://cavu3fnrp5fs1"
+
+[node name="HandL" type="Node2D" parent="Root/LowerBase/LowerBody/UpperBody/ArmL" unique_id=797255488]
+position = Vector2(-25.833725, -0.11510849)
+rotation = -1.5162116
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("3_dbbxh")
+metadata/_custom_type_script = "uid://cavu3fnrp5fs1"
+
+[node name="Head" type="Node2D" parent="Root/LowerBase/LowerBody/UpperBody" unique_id=1026522763]
+position = Vector2(0, -20.525)
+script = ExtResource("3_dbbxh")
+metadata/_custom_type_script = "uid://cavu3fnrp5fs1"
+
+[node name="FloorR" type="Node2D" parent="Root" unique_id=645478322]
+position = Vector2(7.695, 0)
+
+[node name="FootR" type="Node2D" parent="Root/FloorR" unique_id=1769083526]
+script = ExtResource("3_dbbxh")
+metadata/_custom_type_script = "uid://cavu3fnrp5fs1"
+
+[node name="FloorL" type="Node2D" parent="Root" unique_id=892736827]
+position = Vector2(-7.765, 0)
+
+[node name="FootL" type="Node2D" parent="Root/FloorL" unique_id=2024748919]
+script = ExtResource("3_dbbxh")
+metadata/_custom_type_script = "uid://cavu3fnrp5fs1"

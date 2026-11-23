@@ -8,11 +8,15 @@ namespace SpriteSet;
 [GlobalClass]
 public partial class SpriteSet : TileSet
 {
+    [Signal]
+    public delegate void OnUpdateSpriteOffsetEventHandler(StringName group, StringName name, Vector2 offset);
+
     private readonly static HashSet<SpriteSet> SetsToRegister = [];
     public static void RegisterSets()
     {
         foreach(var set in SetsToRegister)
         {
+            ResourceSaver.Save(set);
             set.RegisterSprites();
             GD.Print($"Saved {set.ResourcePath}");
         }
@@ -52,7 +56,7 @@ public partial class SpriteSet : TileSet
             SetCustomDataLayerType(offsetLayerId, Variant.Type.Vector2);
         }
         RegisterSprites();
-        Changed += AddToRegisterSets;
+        Callable.From(()=>{Changed += AddToRegisterSets;}).CallDeferred();
     }
 
     private void AddToRegisterSets()
@@ -126,27 +130,10 @@ public partial class SpriteSet : TileSet
         return sprites.Keys.First();
     }
 
-    public void SetOffset(StringName group, StringName name, Vector2 value)
+    public void UpdateSpriteOffset(StringName group, StringName name, Vector2 offset)
     {
-        if(!TryGetSprite(group, name, out var data))
-            return;
-        var tileData = GetData(data);
-        tileData.SetCustomData("Offset", value);
-        DirtyTiles.Add((group, name));
-    }
-    public Vector2? GetOffset(StringName group, StringName name)
-    {
-        if(!TryGetSprite(group, name, out var data))
-            return null;
-        var tileData = GetData(data);
-        return tileData.GetCustomData("Offset").As<Vector2>();
-    }
-    public void ResetDirty(StringName group, StringName name)
-    {
-        DirtyTiles.Remove((group, name));
-    }
-    public bool IsDirty(StringName group, StringName name)
-    {
-        return DirtyTiles.Contains((group,name));
+        var tileData = GetData(Sprites[group][name]);
+        tileData.SetCustomData("Offset", offset);
+        EmitSignal("OnUpdateSpriteOffset", group, name, offset);
     }
 }

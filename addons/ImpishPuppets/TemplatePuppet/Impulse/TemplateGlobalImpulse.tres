@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="GlobalImpulse" format=3 uid="uid://bpn2dykyw5mjp"]
+
+[ext_resource type="Script" uid="uid://ty0bivcbhw8k" path="res://addons/ImpishPuppets/PuppetBones/GlobalImpulse.cs" id="1_elmy5"]
+
+[resource]
+script = ExtResource("1_elmy5")
+metadata/_custom_type_script = "uid://ty0bivcbhw8k"

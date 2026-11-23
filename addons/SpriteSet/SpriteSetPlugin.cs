@@ -1,4 +1,3 @@
-#if TOOLS
 using Godot;
 
 namespace SpriteSet;
@@ -11,4 +10,3 @@ public partial class SpriteSetPlugin : EditorPlugin
 		SpriteSet.RegisterSets();
 	}
 }
-#endif

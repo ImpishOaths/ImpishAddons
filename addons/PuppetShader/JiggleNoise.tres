@@ -3,6 +3,7 @@
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_6to4c"]
 noise_type = 2
 frequency = 0.024
+fractal_octaves = 2
 
 [resource]
 width = 128

@@ -1,0 +1,432 @@
+[gd_resource type="TileSet" script_class="SpriteSet" format=3 uid="uid://dqotkfdbayutn"]
+
+[ext_resource type="Material" uid="uid://bvpicncfya724" path="res://addons/ImpishPuppets/TemplatePuppet/TemplateMaterial2D.tres" id="1_77cxk"]
+[ext_resource type="Script" uid="uid://do0exgujxswtf" path="res://addons/SpriteSet/SpriteSet.cs" id="1_hb0as"]
+[ext_resource type="Texture2D" uid="uid://5frq0s0hhdo8" path="res://addons/ImpishPuppets/TemplatePuppet/TemplateImage.png" id="2_3bv0w"]
+[ext_resource type="Script" uid="uid://do6cul6vaacdd" path="res://addons/SpriteSet/SpriteData.cs" id="2_drt2e"]
+
+[sub_resource type="Resource" id="Resource_81y4f"]
+script = ExtResource("2_drt2e")
+TileCoord = Vector2i(4, 10)
+TileSize = Vector2i(2, 2)
+Group = &"Core"
+Name = &"Foot"
+
+[sub_resource type="Resource" id="Resource_77cxk"]
+script = ExtResource("2_drt2e")
+TileSize = Vector2i(3, 3)
+Group = &"Core"
+Name = &"Head"
+
+[sub_resource type="Resource" id="Resource_xdpkd"]
+script = ExtResource("2_drt2e")
+TileCoord = Vector2i(6, 4)
+TileSize = Vector2i(2, 2)
+Group = &"Core"
+Name = &"LowerArm"
+
+[sub_resource type="Resource" id="Resource_efgdt"]
+script = ExtResource("2_drt2e")
+TileCoord = Vector2i(0, 8)
+TileSize = Vector2i(3, 3)
+Group = &"Core"
+Name = &"LowerBody"
+
+[sub_resource type="Resource" id="Resource_4gjbc"]
+script = ExtResource("2_drt2e")
+TileCoord = Vector2i(6, 8)
+TileSize = Vector2i(2, 2)
+Group = &"Core"
+Name = &"LowerLeg"
+
+[sub_resource type="Resource" id="Resource_jv4w7"]
+script = ExtResource("2_drt2e")
+TileCoord = Vector2i(4, 4)
+TileSize = Vector2i(2, 2)
+Group = &"Core"
+Name = &"UpperArm"
+
+[sub_resource type="Resource" id="Resource_drt2e"]
+script = ExtResource("2_drt2e")
+TileCoord = Vector2i(0, 4)
+TileSize = Vector2i(3, 3)
+Group = &"Core"
+Name = &"UpperBody"
+
+[sub_resource type="Resource" id="Resource_a3ifc"]
+script = ExtResource("2_drt2e")
+TileCoord = Vector2i(4, 8)
+TileSize = Vector2i(2, 2)
+Group = &"Core"
+Name = &"UpperLeg"
+
+[sub_resource type="Resource" id="Resource_bovyb"]
+script = ExtResource("2_drt2e")
+TileCoord = Vector2i(4, 6)
+TileSize = Vector2i(2, 2)
+Group = &"Detail"
+Name = &"Breast"
+
+[sub_resource type="Resource" id="Resource_n3qsl"]
+script = ExtResource("2_drt2e")
+TileCoord = Vector2i(14, 0)
+TileSize = Vector2i(2, 2)
+Group = &"Detail"
+Name = &"HairBack"
+
+[sub_resource type="Resource" id="Resource_tvqol"]
+script = ExtResource("2_drt2e")
+TileCoord = Vector2i(12, 0)
+TileSize = Vector2i(2, 2)
+Group = &"Detail"
+Name = &"HairFront"
+
+[sub_resource type="Resource" id="Resource_b1ey7"]
+script = ExtResource("2_drt2e")
+TileCoord = Vector2i(4, 1)
+TileSize = Vector2i(1, 1)
+Group = &"Detail"
+Name = &"Nose"
+
+[sub_resource type="Resource" id="Resource_ssjo4"]
+script = ExtResource("2_drt2e")
+TileCoord = Vector2i(6, 10)
+TileSize = Vector2i(2, 2)
+Group = &"Detail"
+Name = &"Tail"
+
+[sub_resource type="Resource" id="Resource_dxr0i"]
+script = ExtResource("2_drt2e")
+TileCoord = Vector2i(9, 1)
+TileSize = Vector2i(1, 1)
+AlternateIndex = 1
+Group = &"Eye"
+Name = &"ArchDown"
+
+[sub_resource type="Resource" id="Resource_duvhc"]
+script = ExtResource("2_drt2e")
+TileCoord = Vector2i(9, 1)
+TileSize = Vector2i(1, 1)
+Group = &"Eye"
+Name = &"ArchUp"
+
+[sub_resource type="Resource" id="Resource_itu42"]
+script = ExtResource("2_drt2e")
+TileCoord = Vector2i(8, 1)
+TileSize = Vector2i(1, 1)
+Group = &"Eye"
+Name = &"Closed"
+
+[sub_resource type="Resource" id="Resource_rc7k6"]
+script = ExtResource("2_drt2e")
+TileCoord = Vector2i(5, 1)
+TileSize = Vector2i(1, 1)
+Group = &"Eye"
+Name = &"Eye"
+
+[sub_resource type="Resource" id="Resource_vu4gm"]
+script = ExtResource("2_drt2e")
+TileCoord = Vector2i(6, 1)
+TileSize = Vector2i(1, 1)
+Group = &"Eye"
+Name = &"EyeBack"
+
+[sub_resource type="Resource" id="Resource_fv4w6"]
+script = ExtResource("2_drt2e")
+TileCoord = Vector2i(7, 1)
+TileSize = Vector2i(1, 1)
+Group = &"Eye"
+Name = &"Pupil"
+
+[sub_resource type="Resource" id="Resource_hj2ka"]
+script = ExtResource("2_drt2e")
+TileCoord = Vector2i(6, 0)
+TileSize = Vector2i(1, 1)
+AlternateIndex = 1
+Group = &"Eyebrow"
+Name = &"ArchDown"
+
+[sub_resource type="Resource" id="Resource_4nu06"]
+script = ExtResource("2_drt2e")
+TileCoord = Vector2i(6, 0)
+TileSize = Vector2i(1, 1)
+Group = &"Eyebrow"
+Name = &"ArchUp"
+
+[sub_resource type="Resource" id="Resource_hvnxw"]
+script = ExtResource("2_drt2e")
+TileCoord = Vector2i(4, 0)
+TileSize = Vector2i(1, 1)
+Group = &"Eyebrow"
+Name = &"Flat"
+
+[sub_resource type="Resource" id="Resource_thc6u"]
+script = ExtResource("2_drt2e")
+TileCoord = Vector2i(5, 0)
+TileSize = Vector2i(1, 1)
+AlternateIndex = 1
+Group = &"Eyebrow"
+Name = &"SlantDown"
+
+[sub_resource type="Resource" id="Resource_qmu21"]
+script = ExtResource("2_drt2e")
+TileCoord = Vector2i(5, 0)
+TileSize = Vector2i(1, 1)
+Group = &"Eyebrow"
+Name = &"SlantUp"
+
+[sub_resource type="Resource" id="Resource_omiq5"]
+script = ExtResource("2_drt2e")
+TileCoord = Vector2i(10, 4)
+TileSize = Vector2i(1, 1)
+Group = &"Hand"
+Name = &"Finger"
+
+[sub_resource type="Resource" id="Resource_enkkc"]
+script = ExtResource("2_drt2e")
+TileCoord = Vector2i(8, 4)
+TileSize = Vector2i(2, 2)
+Group = &"Hand"
+Name = &"Palm"
+
+[sub_resource type="Resource" id="Resource_ig6mj"]
+script = ExtResource("2_drt2e")
+TileCoord = Vector2i(10, 5)
+TileSize = Vector2i(1, 1)
+Group = &"Hand"
+Name = &"Thumb"
+
+[sub_resource type="Resource" id="Resource_o8fip"]
+script = ExtResource("2_drt2e")
+TileCoord = Vector2i(4, 2)
+TileSize = Vector2i(1, 1)
+Group = &"Mouth"
+Name = &"Flat"
+
+[sub_resource type="Resource" id="Resource_ajfew"]
+script = ExtResource("2_drt2e")
+TileCoord = Vector2i(6, 2)
+TileSize = Vector2i(1, 1)
+Group = &"Mouth"
+Name = &"Frown"
+
+[sub_resource type="Resource" id="Resource_3puhs"]
+script = ExtResource("2_drt2e")
+TileCoord = Vector2i(7, 2)
+TileSize = Vector2i(1, 1)
+Group = &"Mouth"
+Name = &"Open"
+
+[sub_resource type="Resource" id="Resource_v5cgm"]
+script = ExtResource("2_drt2e")
+TileCoord = Vector2i(8, 2)
+TileSize = Vector2i(1, 1)
+Group = &"Mouth"
+Name = &"OpenWide"
+
+[sub_resource type="Resource" id="Resource_2ff8y"]
+script = ExtResource("2_drt2e")
+TileCoord = Vector2i(5, 2)
+TileSize = Vector2i(1, 1)
+Group = &"Mouth"
+Name = &"Smile"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1nd36"]
+texture = ExtResource("2_3bv0w")
+0:0/size_in_atlas = Vector2i(3, 3)
+0:0/0 = 0
+0:0/0/custom_data_0 = &"Core"
+0:0/0/custom_data_1 = &"Head"
+0:0/0/custom_data_2 = Vector2(1.7378006, -13.379379)
+0:4/size_in_atlas = Vector2i(3, 3)
+0:4/0 = 0
+0:4/0/custom_data_0 = &"Core"
+0:4/0/custom_data_1 = &"UpperBody"
+0:4/0/custom_data_2 = Vector2(2.2119064, -10.090267)
+4:4/size_in_atlas = Vector2i(2, 2)
+4:4/0 = 0
+4:4/0/custom_data_0 = &"Core"
+4:4/0/custom_data_1 = &"UpperArm"
+4:4/0/custom_data_2 = Vector2(5.8943253, -1.4717064)
+6:4/size_in_atlas = Vector2i(2, 2)
+6:4/0 = 0
+6:4/0/custom_data_0 = &"Core"
+6:4/0/custom_data_1 = &"LowerArm"
+6:4/0/custom_data_2 = Vector2(6.178482, -0.38139725)
+4:8/size_in_atlas = Vector2i(2, 2)
+4:8/0 = 0
+4:8/0/custom_data_0 = &"Core"
+4:8/0/custom_data_1 = &"UpperLeg"
+4:8/0/custom_data_2 = Vector2(5.661476, 8.677067)
+6:8/size_in_atlas = Vector2i(2, 2)
+6:8/0 = 0
+6:8/0/custom_data_0 = &"Core"
+6:8/0/custom_data_1 = &"LowerLeg"
+6:8/0/custom_data_2 = Vector2(-0.101696014, 9.016148)
+4:10/size_in_atlas = Vector2i(2, 2)
+4:10/0 = 0
+4:10/0/custom_data_0 = &"Core"
+4:10/0/custom_data_1 = &"Foot"
+4:10/0/custom_data_2 = Vector2(2.991127, -6.8116074)
+4:6/size_in_atlas = Vector2i(2, 2)
+4:6/0 = 0
+4:6/0/custom_data_0 = &"Detail"
+4:6/0/custom_data_1 = &"Breast"
+4:6/0/custom_data_2 = Vector2(-3.7746909, 1.0358849)
+0:8/size_in_atlas = Vector2i(3, 3)
+0:8/0 = 0
+0:8/0/custom_data_0 = &"Core"
+0:8/0/custom_data_1 = &"LowerBody"
+0:8/0/custom_data_2 = Vector2(1.5679321, -14.315094)
+6:10/size_in_atlas = Vector2i(2, 2)
+6:10/0 = 0
+6:10/0/custom_data_0 = &"Detail"
+6:10/0/custom_data_1 = &"Tail"
+6:10/0/custom_data_2 = Vector2(-10.497936, 4.959709)
+8:4/size_in_atlas = Vector2i(2, 2)
+8:4/0 = 0
+8:4/0/custom_data_0 = &"Hand"
+8:4/0/custom_data_1 = &"Palm"
+8:4/0/custom_data_2 = Vector2(-0.0639801, -6.2408752)
+10:4/0 = 0
+10:4/0/custom_data_0 = &"Hand"
+10:4/0/custom_data_1 = &"Finger"
+10:4/0/custom_data_2 = Vector2(-0.08613205, 0.6778145)
+10:5/0 = 0
+10:5/0/custom_data_0 = &"Hand"
+10:5/0/custom_data_1 = &"Thumb"
+10:5/0/custom_data_2 = Vector2(-0.31147385, -1.6221619)
+4:0/0 = 0
+4:0/0/custom_data_0 = &"Eyebrow"
+4:0/0/custom_data_1 = &"Flat"
+5:0/next_alternative_id = 2
+5:0/0 = 0
+5:0/0/custom_data_0 = &"Eyebrow"
+5:0/0/custom_data_1 = &"SlantUp"
+5:0/1 = 1
+5:0/1/flip_h = true
+5:0/1/custom_data_0 = &"Eyebrow"
+5:0/1/custom_data_1 = &"SlantDown"
+4:1/0 = 0
+4:1/0/custom_data_0 = &"Detail"
+4:1/0/custom_data_1 = &"Nose"
+5:1/0 = 0
+5:1/0/custom_data_0 = &"Eye"
+5:1/0/custom_data_1 = &"Eye"
+5:1/0/custom_data_2 = Vector2(0.72270596, -0.20038366)
+4:2/0 = 0
+4:2/0/custom_data_0 = &"Mouth"
+4:2/0/custom_data_1 = &"Flat"
+5:2/0 = 0
+5:2/0/custom_data_0 = &"Mouth"
+5:2/0/custom_data_1 = &"Smile"
+5:2/0/custom_data_2 = Vector2(0.905, -0.56)
+6:2/0 = 0
+6:2/0/custom_data_0 = &"Mouth"
+6:2/0/custom_data_1 = &"Frown"
+7:2/0 = 0
+7:2/0/custom_data_0 = &"Mouth"
+7:2/0/custom_data_1 = &"Open"
+6:1/0 = 0
+6:1/0/custom_data_0 = &"Eye"
+6:1/0/custom_data_1 = &"EyeBack"
+6:1/0/custom_data_2 = Vector2(0.78904724, -0.11385727)
+8:2/0 = 0
+8:2/0/custom_data_0 = &"Mouth"
+8:2/0/custom_data_1 = &"OpenWide"
+8:2/0/custom_data_2 = Vector2(-0.695, 0)
+7:1/0 = 0
+7:1/0/custom_data_0 = &"Eye"
+7:1/0/custom_data_1 = &"Pupil"
+8:1/0 = 0
+8:1/0/custom_data_0 = &"Eye"
+8:1/0/custom_data_1 = &"Closed"
+8:1/0/custom_data_2 = Vector2(0.34907532, 0.87252045)
+6:0/next_alternative_id = 2
+6:0/0 = 0
+6:0/0/custom_data_0 = &"Eyebrow"
+6:0/0/custom_data_1 = &"ArchUp"
+6:0/1 = 1
+6:0/1/flip_v = true
+6:0/1/custom_data_0 = &"Eyebrow"
+6:0/1/custom_data_1 = &"ArchDown"
+6:0/1/custom_data_2 = Vector2(0, -0.86)
+9:1/next_alternative_id = 2
+9:1/0 = 0
+9:1/0/custom_data_0 = &"Eye"
+9:1/0/custom_data_1 = &"ArchUp"
+9:1/0/custom_data_2 = Vector2(0.47875977, 1.4580116)
+9:1/1 = 1
+9:1/1/flip_v = true
+9:1/1/custom_data_0 = &"Eye"
+9:1/1/custom_data_1 = &"ArchDown"
+9:1/1/custom_data_2 = Vector2(0.45251465, -2.3301926)
+12:0/size_in_atlas = Vector2i(2, 2)
+12:0/0 = 0
+12:0/0/custom_data_0 = &"Detail"
+12:0/0/custom_data_1 = &"HairFront"
+14:0/size_in_atlas = Vector2i(2, 2)
+14:0/0 = 0
+14:0/0/custom_data_0 = &"Detail"
+14:0/0/custom_data_1 = &"HairBack"
+
+[resource]
+custom_data_layer_0/name = "Group"
+custom_data_layer_0/type = 21
+custom_data_layer_1/name = "Name"
+custom_data_layer_1/type = 21
+custom_data_layer_2/name = "Offset"
+custom_data_layer_2/type = 5
+sources/0 = SubResource("TileSetAtlasSource_1nd36")
+script = ExtResource("1_hb0as")
+Sprites = Dictionary[StringName, Dictionary]({
+&"Core": Dictionary[StringName, ExtResource("2_drt2e")]({
+&"Foot": SubResource("Resource_81y4f"),
+&"Head": SubResource("Resource_77cxk"),
+&"LowerArm": SubResource("Resource_xdpkd"),
+&"LowerBody": SubResource("Resource_efgdt"),
+&"LowerLeg": SubResource("Resource_4gjbc"),
+&"UpperArm": SubResource("Resource_jv4w7"),
+&"UpperBody": SubResource("Resource_drt2e"),
+&"UpperLeg": SubResource("Resource_a3ifc")
+}),
+&"Detail": Dictionary[StringName, ExtResource("2_drt2e")]({
+&"Breast": SubResource("Resource_bovyb"),
+&"HairBack": SubResource("Resource_n3qsl"),
+&"HairFront": SubResource("Resource_tvqol"),
+&"Nose": SubResource("Resource_b1ey7"),
+&"Tail": SubResource("Resource_ssjo4")
+}),
+&"Eye": Dictionary[StringName, ExtResource("2_drt2e")]({
+&"ArchDown": SubResource("Resource_dxr0i"),
+&"ArchUp": SubResource("Resource_duvhc"),
+&"Closed": SubResource("Resource_itu42"),
+&"Eye": SubResource("Resource_rc7k6"),
+&"EyeBack": SubResource("Resource_vu4gm"),
+&"Pupil": SubResource("Resource_fv4w6")
+}),
+&"Eyebrow": Dictionary[StringName, ExtResource("2_drt2e")]({
+&"ArchDown": SubResource("Resource_hj2ka"),
+&"ArchUp": SubResource("Resource_4nu06"),
+&"Flat": SubResource("Resource_hvnxw"),
+&"SlantDown": SubResource("Resource_thc6u"),
+&"SlantUp": SubResource("Resource_qmu21")
+}),
+&"Hand": Dictionary[StringName, ExtResource("2_drt2e")]({
+&"Finger": SubResource("Resource_omiq5"),
+&"Palm": SubResource("Resource_enkkc"),
+&"Thumb": SubResource("Resource_ig6mj")
+}),
+&"Mouth": Dictionary[StringName, ExtResource("2_drt2e")]({
+&"Flat": SubResource("Resource_o8fip"),
+&"Frown": SubResource("Resource_ajfew"),
+&"Open": SubResource("Resource_3puhs"),
+&"OpenWide": SubResource("Resource_v5cgm"),
+&"Smile": SubResource("Resource_2ff8y")
+})
+})
+Textures = Dictionary[int, Texture2D]({
+0: ExtResource("2_3bv0w")
+})
+DefaultMaterial = ExtResource("1_77cxk")
+metadata/_custom_type_script = "uid://do0exgujxswtf"

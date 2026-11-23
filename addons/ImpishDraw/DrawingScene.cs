@@ -196,8 +196,6 @@ public partial class DrawingScene: Control, ISerializationListener
     private readonly HashSet<string> DirtyImages = [];
     private ImageTexture DrawingTexture;
     private Image DrawingImage;
-    // In-addon clipboard: Godot's DisplayServer can read an image from the OS clipboard but has
-    // no API to write one, so copy/cut can only populate this rather than the real clipboard.
     private Image ClipboardImage;
     private void StartDrawingSelected()
     {
@@ -284,8 +282,6 @@ public partial class DrawingScene: Control, ISerializationListener
         }
     }
 
-    // Selection is treated as its axis-aligned bounding box here, not the precise lasso/box
-    // shape - simpler and matches typical rectangular copy/paste behavior.
     private void CopySelection(MoveTool mover, Rect2I region)
     {
         Rect2I bbox = SelectionHelper.GetPolygonBounds(mover.GetSelection()).Intersection(region);
@@ -335,9 +331,6 @@ public partial class DrawingScene: Control, ISerializationListener
         ];
         var pasteTool = new MoveTool(pasteRegion, cutoutImage, selectionImage);
 
-        // Show the pasted content at its resting (identity-transform) position immediately,
-        // without going through Begin()/Step() - those need real drag state that hasn't started
-        // yet, and would otherwise leave the paste invisible until the user first moves it.
         DrawingImage.CopyFrom(cutoutImage);
         DrawingImage.BlendRect(selectionImage, new Rect2I(Vector2I.Zero, DrawingImage.GetSize()), Vector2I.Zero);
         DrawingTexture.Update(DrawingImage);
@@ -492,8 +485,6 @@ public partial class DrawingScene: Control, ISerializationListener
                         }
                         else if(NextTool is MoveTool)
                         {
-                            // Finalizing a selection (SelectorTool -> MoveTool) is its own undo step,
-                            // separate from any subsequent move.
                             UndoRedo.CreateAction(SelectedTool.Name);
                             AddSetToolStep(true, NextTool);
                             AddSetToolStep(false, null);
@@ -562,8 +553,6 @@ public partial class DrawingScene: Control, ISerializationListener
         var baseImage = ImagesHistory[OriginalTexture.ResourcePath];
         var changeImage = DrawingImage.GetRegion(region);
         var undoImage = baseImage.GetRegion(region);
-        // Only Move tool state is worth restoring on undo; one-shot tools (brush/line) should not
-        // be reselected, so anything that isn't a MoveTool collapses to null here.
         DrawingTool previousTool = SelectedTool is MoveTool ? SelectedTool : null;
         UndoRedo.CreateAction(message);
         UndoRedo.AddDoMethod(this, "DoTextureChange", baseImage, changeImage, region.Position);
@@ -573,13 +562,6 @@ public partial class DrawingScene: Control, ISerializationListener
         UndoRedo.CommitAction();
     }
 
-    // Binds a do/undo step that reselects `tool`. A MoveTool is stored as its immutable
-    // region/cutout/selection/transform data and reconstructed fresh each time it's applied (via
-    // SetMoveTool), rather than passing the live instance through, since that instance gets
-    // mutated in place by any later drag and can't be safely replayed as-is across undo/redo.
-    // Only MoveTool state is ever worth restoring this way - one-shot tools (brush/line/fill)
-    // never flow through here as a reselect target, so `tool` is otherwise always null and this
-    // just records a deselect step.
     private void AddSetToolStep(bool doStep, DrawingTool tool)
     {
         if(tool is MoveTool mover)
@@ -663,8 +645,6 @@ public partial class DrawingScene: Control, ISerializationListener
             return;
         if(PreviousToolButton != null && PreviousToolButton != pressed)
         {
-            // Switching tools shouldn't leave a Move selection dangling - finish it first, as its
-            // own separate undo step.
             if(SelectedTool is MoveTool)
                 CommitSelectedTool();
             UndoRedo.CreateAction("Switch Tool");
@@ -675,9 +655,6 @@ public partial class DrawingScene: Control, ISerializationListener
         PreviousToolButton = pressed;
     }
 
-    // Pressing a tool button changes ButtonPressed on a group member, which re-emits
-    // ToolButtonGroup.Pressed and would otherwise recurse back into CheckMouseDraw and record a
-    // duplicate action; _ApplyingToolButton suppresses that while replaying do/undo.
     private void PressToolButton(BaseButton button)
     {
         _ApplyingToolButton = true;

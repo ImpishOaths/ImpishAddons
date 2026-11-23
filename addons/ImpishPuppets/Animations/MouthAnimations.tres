@@ -1,0 +1,90 @@
+[gd_resource type="AnimationLibrary" format=3 uid="uid://ci7s1jon67my5"]
+
+[sub_resource type="Animation" id="Animation_fp1jr"]
+resource_name = "Flat"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mouth:SpriteName")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Flat"]
+}
+
+[sub_resource type="Animation" id="Animation_ny3sd"]
+resource_name = "Frown"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mouth:SpriteName")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Frown"]
+}
+
+[sub_resource type="Animation" id="Animation_bce1h"]
+resource_name = "Open"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mouth:SpriteName")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Open"]
+}
+
+[sub_resource type="Animation" id="Animation_qeqvy"]
+resource_name = "OpenWide"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mouth:SpriteName")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"OpenWide"]
+}
+
+[sub_resource type="Animation" id="Animation_qriud"]
+resource_name = "Smile"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mouth:SpriteName")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Smile"]
+}
+
+[resource]
+_data = {
+&"Flat": SubResource("Animation_fp1jr"),
+&"Frown": SubResource("Animation_ny3sd"),
+&"Open": SubResource("Animation_bce1h"),
+&"OpenWide": SubResource("Animation_qeqvy"),
+&"Smile": SubResource("Animation_qriud")
+}

@@ -2,8 +2,8 @@
 
 [sub_resource type="Gradient" id="Gradient_e6xgy"]
 interpolation_mode = 1
-offsets = PackedFloat32Array(0, 0.19999999, 0.39999998, 0.6, 0.8)
-colors = PackedColorArray(0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1)
+offsets = PackedFloat32Array(0, 0.19999999, 0.2, 0.39999998, 0.6, 0.8)
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1)
 metadata/_snap_enabled = true
 metadata/_snap_count = 5
 

@@ -8,13 +8,13 @@ namespace BetterRemotes;
 public partial class Remote2D : Node2D
 {
 	[Export]
-	public Node2D Other;
+	public Node2D Target; 
 
     public override void _Process(double delta)
 	{
-		if(Other == null)
+		if(Target == null)
 			return;
-		Other.GlobalPosition = GlobalPosition;
-		Other.GlobalRotation = GlobalRotation;
+		Target.GlobalPosition = GlobalPosition;
+		Target.GlobalRotation = GlobalRotation;
 	}
 }

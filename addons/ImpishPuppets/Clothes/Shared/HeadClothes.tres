@@ -1,0 +1,42 @@
+[gd_resource type="AnimationLibrary" format=3 uid="uid://lhlhditeelid"]
+
+[ext_resource type="TileSet" uid="uid://br8t3hfw4vamk" path="res://addons/ImpishPuppets/Clothes/Femme/FemmeClothesSprites.tres" id="1_4cpj8"]
+[ext_resource type="TileSet" uid="uid://csq6q8dkjypkm" path="res://addons/ImpishPuppets/Clothes/None/NoneClothesSprites.tres" id="2_h4nl5"]
+
+[sub_resource type="Animation" id="Animation_5jac0"]
+resource_name = "Femme"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head/Head/ClothesHead:SpriteSet")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_4cpj8")]
+}
+
+[sub_resource type="Animation" id="Animation_5jlnj"]
+resource_name = "None"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head/Head/ClothesHead:SpriteSet")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_h4nl5")]
+}
+
+[resource]
+_data = {
+&"Femme": SubResource("Animation_5jac0"),
+&"None": SubResource("Animation_5jlnj")
+}
